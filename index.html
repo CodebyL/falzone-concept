@@ -135,7 +135,9 @@ nav#nav a:hover{text-decoration:underline;text-underline-offset:5px;text-decorat
 
 /* towns: glacial sand */
 .towns{background:var(--sand-2);color:var(--ink)}
-.towns .wrap{padding-top:var(--s6);padding-bottom:var(--s6);display:grid;grid-template-columns:1fr 1.6fr;gap:var(--s5);align-items:start}
+.towns .wrap{padding-top:var(--s6);padding-bottom:var(--s6);display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:var(--s4)}
+.towns .t-call{font-size:clamp(1.4rem,2.6vw,2rem);font-weight:800;font-variation-settings:"wdth" 80;color:var(--clay-d);text-decoration:none}
+.towns .t-call:hover{text-decoration:underline}
 .towns h2{font-size:clamp(1.9rem,3.6vw,2.8rem);font-variation-settings:"wdth" 80;letter-spacing:-.02em;line-height:1}
 .towns .t-note{color:var(--ink-2);margin-top:var(--s3);font-size:.95rem;max-width:26em}
 .town-list{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:var(--s2) var(--s4);font-size:clamp(1.4rem,2.6vw,2rem);font-weight:700;font-variation-settings:"wdth" 80;letter-spacing:-.01em;line-height:1.25}
@@ -342,11 +344,9 @@ footer a{color:#fff}
  <div class="wrap">
   <div>
    <h2 id="towns-h">Based in St. James, on the North Shore.</h2>
-   <p class="t-note">Sample service area for this concept. Ask Joe whether your town is on the route.</p>
+   <p class="t-note">Not sure if your town is on the route? Call and ask Joe.</p>
   </div>
-  <ul class="town-list">
-   <li class="home">St. James</li><li>Smithtown</li><li>Head of the Harbor</li><li>Nissequogue</li><li>Stony Brook</li><li>Setauket</li><li>Lake Grove</li><li>Kings Park</li>
-  </ul>
+  <a class="t-call" href="tel:+16313717043">(631) 371-7043</a>
  </div>
 </section>
 
@@ -394,7 +394,7 @@ footer a{color:#fff}
    <div><b>Call Joe</b><p><a href="tel:+16313717043">(631) 371-7043</a></p></div>
    <div><b>On this page</b><p><a href="#services">Services</a></p><p><a href="#towns">Towns</a></p><p><a href="#estimate">Free estimate</a></p></div>
   </div>
-  <p class="disc">Independent website concept designed by Lisette Colon. Not affiliated with or approved by Falzone Landscaping and Design. Address, hours and the rating and review count are from the business's public Google listing, checked October 2026. The service list is drawn from Google reviews, details to confirm with the owner. The towns list is a sample service area, not confirmed by the business. Illustrations are not real properties, and the estimate form is a sample feature: nothing entered here is sent or saved.</p>
+  <p class="disc">Independent website concept designed by Lisette Colon. Not affiliated with or approved by Falzone Landscaping and Design. Address, hours and the rating and review count are from the business's public Google listing, checked October 2026. The service list is drawn from Google reviews, details to confirm with the owner. Illustrations are not real properties, and the estimate form is a sample feature: nothing entered here is sent or saved.</p>
  </div>
 </footer>
 <a class="btn btn-gold sticky-call" href="tel:+16313717043">Call Joe, (631) 371-7043</a>
