@@ -8,232 +8,228 @@
 <meta name="robots" content="noindex">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&display=swap" rel="stylesheet">
 <style>
 :root{
- --lawn:#2f6b2f;--lawn-d:#1f4d20;--lawn-l:#6fa04f;--lawn-2:#3b7a37;--soil:#5a3e2b;--soil-d:#3f2b1e;--soil-l:#8a6a4f;--cream:#f6f1e4;--cream-2:#ede5d1;--ink:#1f2419;--muted:#555a4c;--sun:#e5b543;
- --s1:4px;--s2:8px;--s3:16px;--s4:24px;--s5:32px;--s6:48px;--s7:72px;--s8:112px;
- --wrap:1200px;--r:8px;
- --serif:"Libre Baskerville",Baskerville,Georgia,serif;--sans:"Hanken Grotesk",system-ui,-apple-system,"Segoe UI",sans-serif;
+ --sky:#dde7ea;--sky-2:#c9d8dd;
+ --blade:#557d2c;--blade-d:#3d5d1e;
+ --loam:#33241a;--loam-2:#3e2c1f;--loam-3:#48331f;--loam-4:#523a22;
+ --clay:#8f4f2c;--clay-d:#6f3a1f;
+ --sand:#e6d1a2;--sand-2:#dcc28c;
+ --rock:#25211e;
+ --ink:#1d1915;--ink-2:#4c4339;
+ --bone:#f3eadb;--bone-2:#d9cbb4;
+ --marigold:#f0b23a;--marigold-d:#d99a1f;
+ --water:#3d8db2;--water-l:#8fc3dc;
+ --s1:4px;--s2:8px;--s3:16px;--s4:24px;--s5:40px;--s6:64px;--s7:104px;
+ --wrap:1180px;
+ --f:"Bricolage Grotesque",system-ui,-apple-system,"Segoe UI",sans-serif;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;font-family:var(--sans);font-size:18px;line-height:1.6;color:var(--ink);background:var(--cream);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body{margin:0;font-family:var(--f);font-optical-sizing:auto;font-size:18px;line-height:1.6;color:var(--ink);background:var(--sky);-webkit-font-smoothing:antialiased;overflow-x:hidden}
 a{color:inherit}
-:focus-visible{outline:3px solid var(--sun);outline-offset:3px}
-h1,h2,h3{font-family:var(--serif);font-style:normal;font-weight:700;line-height:1.15;margin:0;letter-spacing:-.01em}
-em,i{font-style:normal}
-p{margin:0 0 var(--s3)}
+a[href^="tel:"]{white-space:nowrap}
+:focus-visible{outline:3px solid var(--water);outline-offset:3px}
+.dark :focus-visible{outline-color:var(--marigold)}
+h1,h2,h3{margin:0;font-weight:800;line-height:1.02;letter-spacing:-.02em;font-variation-settings:"wdth" 80}
+p{margin:0}
 .wrap{max-width:var(--wrap);margin:0 auto;padding:0 var(--s5)}
 .skip{position:absolute;left:-999px;top:0;background:#fff;padding:var(--s2) var(--s3);z-index:100}
 .skip:focus{left:var(--s3);top:var(--s3)}
-.tag{display:inline-flex;align-items:center;gap:var(--s2);font-size:.8rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--soil);margin-bottom:var(--s3)}
-.tag svg{width:16px;height:16px}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:var(--s2);min-height:52px;padding:0 var(--s4);border-radius:var(--r);font:700 1rem var(--sans);text-decoration:none;border:2px solid transparent;cursor:pointer;transition:background .2s,color .2s,transform .15s}
-.btn:active{transform:translateY(1px)}
-.btn-lawn{background:var(--lawn);color:#fff}.btn-lawn:hover{background:var(--lawn-d)}
-.btn-soil{background:var(--soil);color:#fff}.btn-soil:hover{background:var(--soil-d)}
-.btn-line{border-color:var(--lawn);color:var(--lawn-d);background:transparent}.btn-line:hover{background:var(--lawn);color:#fff}
-.btn svg{width:18px;height:18px}
+svg{display:block}
 
-.concept{background:var(--soil-d);color:#efe6d6;font-size:.82rem;text-align:center;padding:var(--s2) var(--s3)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:var(--s2);min-height:54px;padding:0 var(--s4);border-radius:999px;font:700 1.02rem/1 var(--f);text-decoration:none;border:2px solid transparent;cursor:pointer;transition:background-color .2s,color .2s,border-color .2s}
+.btn svg{width:18px;height:18px;flex:none}
+.btn-gold{background:var(--marigold);color:var(--ink)}
+.btn-gold:hover{background:var(--marigold-d)}
+.btn-ink{background:var(--ink);color:var(--bone)}
+.btn-ink:hover{background:var(--loam-4)}
+.btn-line{border-color:var(--ink);color:var(--ink)}
+.btn-line:hover{background:var(--ink);color:var(--sky)}
+
+.concept{background:var(--rock);color:var(--bone-2);font-size:.82rem;text-align:center;padding:var(--s2) var(--s3);line-height:1.4}
 .concept a{color:#fff;font-weight:700}
 
-header.site{background:var(--cream);border-bottom:2px solid var(--lawn);position:sticky;top:0;z-index:50}
-.hd{display:flex;align-items:center;justify-content:space-between;gap:var(--s4);min-height:78px}
-.brand{display:flex;align-items:center;gap:var(--s3);text-decoration:none;color:var(--lawn-d)}
-.brand svg{width:46px;height:46px;flex:none}
-.brand b{display:block;font-family:var(--serif);font-size:1.3rem;line-height:1.1}
-.brand small{display:block;font-size:.74rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--soil)}
+/* header */
+.hd{display:flex;align-items:center;justify-content:space-between;gap:var(--s4);padding-top:var(--s4);padding-bottom:var(--s4)}
+.brand{text-decoration:none;display:flex;align-items:baseline;gap:var(--s2);flex-wrap:wrap;line-height:1}
+.brand b{font-size:1.9rem;font-weight:800;letter-spacing:-.03em;font-variation-settings:"wdth" 75}
+.brand span{font-size:.95rem;font-weight:500;color:var(--ink-2)}
 nav#nav ul{display:flex;gap:var(--s4);list-style:none;margin:0;padding:0}
-nav#nav a{text-decoration:none;font-weight:600;color:var(--ink);display:inline-block;padding:var(--s3) 0;min-height:44px}
-nav#nav a:hover{color:var(--lawn)}
-.hd-r{display:flex;gap:var(--s3);align-items:center}
-.menu-btn{display:none;width:48px;height:48px;border-radius:var(--r);border:2px solid var(--lawn);background:transparent;color:var(--lawn-d);cursor:pointer}
+nav#nav a{text-decoration:none;font-weight:600;display:inline-flex;align-items:center;min-height:44px}
+nav#nav a:hover{text-decoration:underline;text-underline-offset:5px;text-decoration-thickness:2px}
+.hd-r{display:flex;align-items:center;gap:var(--s3)}
+.hd-r .btn{min-height:46px}
+.menu-btn{display:none;width:48px;height:48px;border-radius:50%;border:2px solid var(--ink);background:transparent;color:var(--ink);cursor:pointer;align-items:center;justify-content:center}
 .menu-btn svg{width:22px;height:22px}
 
-/* hero */
-.hero{position:relative;min-height:640px;display:flex;align-items:center;overflow:hidden;background:var(--lawn)}
-.hero svg.lawn{position:absolute;inset:0;width:100%;height:100%}
-.hero .wrap{position:relative;width:100%;padding-top:var(--s7);padding-bottom:var(--s7)}
-.card{background:var(--cream);max-width:560px;padding:var(--s6) var(--s5) var(--s5);border-radius:var(--r);box-shadow:0 30px 60px -30px rgba(20,40,15,.6);position:relative}
-.card::before{content:"";position:absolute;left:var(--s5);right:var(--s5);top:var(--s4);height:4px;background:repeating-linear-gradient(90deg,var(--lawn) 0 18px,var(--lawn-l) 18px 36px);border-radius:2px}
-.card h1{font-size:clamp(2.2rem,4.2vw,3.5rem);color:var(--lawn-d);margin-top:var(--s3)}
-.card p.lede{font-size:1.12rem;color:var(--muted);margin-top:var(--s3)}
-.card .acts{display:flex;flex-wrap:wrap;gap:var(--s3);margin-top:var(--s4)}
-.card .joe{margin:var(--s4) 0 0;font-size:.95rem;color:var(--muted);border-top:1px dashed rgba(90,62,43,.35);padding-top:var(--s3)}
-.spray{transform-box:fill-box;animation:sweep 6s ease-in-out infinite alternate}
-.spray.b{animation-duration:7.5s;animation-delay:-2s}
-.spray.c{animation-duration:5.5s;animation-delay:-4s}
-@keyframes sweep{from{transform:rotate(-40deg)}to{transform:rotate(40deg)}}
+/* hero: the sky above the ground line */
+.hero{position:relative;padding-top:var(--s6)}
+.hero-grid{display:grid;grid-template-columns:1.25fr .9fr;gap:var(--s5);align-items:end}
+.hero h1{font-size:clamp(3.1rem,8.4vw,7.4rem);font-variation-settings:"wdth" 75;letter-spacing:-.035em;line-height:.9;max-width:9.5ch}
+.lede{font-size:1.2rem;color:var(--ink-2);max-width:34em;margin-top:var(--s4)}
+.acts{display:flex;flex-wrap:wrap;gap:var(--s3);margin-top:var(--s5)}
+.rating{display:flex;align-items:center;gap:var(--s3);margin-top:var(--s5);padding-bottom:var(--s6);font-size:1rem;color:var(--ink-2)}
+.rating .score{font-size:2.2rem;font-weight:800;color:var(--ink);line-height:1;font-variation-settings:"wdth" 75}
+.stars{display:flex;gap:2px}
+.stars svg{width:18px;height:18px}
+.rating a{font-weight:700;color:var(--ink)}
+.spray{position:relative;align-self:end}
+.spray svg{width:100%;height:auto;overflow:visible}
+.arc{fill:none;stroke:var(--water);stroke-width:5;stroke-linecap:round;stroke-dasharray:.1 16;animation:flow 2.4s linear infinite}
+.arc.a1{stroke-width:4.5;animation-duration:2.8s;opacity:.9}
+.arc.a2{stroke-width:4;animation-duration:3.2s;opacity:.75}
+.arc.a3{stroke-width:3.5;animation-duration:3.6s;opacity:.55}
+@keyframes flow{to{stroke-dashoffset:-32}}
 
-/* proof */
-.proof{background:var(--soil);color:#fff}
-.proof .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
-.proof .p{padding:var(--s4) var(--s4);display:flex;flex-direction:column}
-.proof .p + .p{border-left:1px solid rgba(255,255,255,.2)}
-.proof b{font-family:var(--serif);font-size:1.6rem}
-.proof span{font-size:.92rem;color:#e6d9c8}
-.stars{display:inline-flex;gap:2px;margin-left:var(--s2)}
-.stars svg{width:16px;height:16px}
+.fringe{display:block;width:100%;height:auto;margin-top:-1px}
+.fringe .gr{fill:var(--blade)}
+.fringe .gr2{fill:var(--blade-d)}
 
-/* services ledger */
-.services{padding:var(--s8) 0}
-.sv-head{display:grid;grid-template-columns:1fr 1fr;gap:var(--s6);align-items:end;margin-bottom:var(--s6)}
-.services h2,.season h2,.reviews h2,.contact h2,.visit h2{font-size:clamp(2rem,3.6vw,3rem);color:var(--lawn-d)}
-.sv-head p{color:var(--muted);margin:0}
-.ledger{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--s4)}
-.col{border-top:6px solid var(--lawn);background:#fff;border-radius:0 0 var(--r) var(--r);padding:var(--s4);box-shadow:0 1px 0 rgba(0,0,0,.06)}
-.col:nth-child(2){border-top-color:var(--soil-l)}
-.col:nth-child(3){border-top-color:#b5654a}
-.col:nth-child(4){border-top-color:var(--lawn-l)}
-.col .verb{font-size:.78rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--soil)}
-.col svg{width:64px;height:64px;display:block;margin:var(--s3) 0}
-.col h3{font-size:1.3rem;color:var(--lawn-d);margin-bottom:var(--s2)}
-.col p{color:var(--muted);font-size:1rem}
-.col ul{list-style:none;margin:var(--s3) 0 0;padding:0}
-.col li{padding:var(--s2) 0;border-top:1px dashed rgba(90,62,43,.3);font-weight:600;font-size:.98rem}
+/* the ground section */
+.ground{background:var(--loam);color:var(--bone);position:relative}
+.roots{position:absolute;left:0;right:0;top:0;width:100%;height:120px;stroke:#5c4330;fill:none;stroke-linecap:round;opacity:.9;pointer-events:none}
+.ground .wrap{position:relative;padding-top:var(--s7);padding-bottom:var(--s6)}
+.sec-h{display:grid;grid-template-columns:1.25fr .9fr;gap:var(--s5);align-items:end;margin-bottom:var(--s6)}
+.sec-h h2{font-size:clamp(2.4rem,5.4vw,4.6rem);font-variation-settings:"wdth" 75;letter-spacing:-.03em;line-height:.95}
+.sec-h p{color:var(--bone-2);max-width:30em}
 
-/* season tool */
-.season{background:var(--cream-2);padding:var(--s8) 0;border-top:1px solid rgba(90,62,43,.15)}
-.se-head{display:grid;grid-template-columns:1fr auto;gap:var(--s4);align-items:end;margin-bottom:var(--s5)}
-.sample-tag{display:inline-block;font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;background:var(--soil);color:#fff;padding:var(--s1) var(--s2);border-radius:4px;margin-bottom:var(--s3)}
-.months{display:grid;grid-template-columns:200px repeat(12,1fr);gap:2px;align-items:center;padding:0 var(--s4) var(--s2)}
-.months button{font:700 .82rem var(--sans);letter-spacing:.06em;text-transform:uppercase;background:transparent;border:0;border-radius:6px;min-height:44px;cursor:pointer;color:var(--muted)}
-.months button:hover{background:rgba(47,107,47,.1)}
-.months button[aria-pressed="true"]{background:var(--lawn);color:#fff}
-.months button.now::after{content:"";display:block;width:6px;height:6px;border-radius:50%;background:var(--sun);margin:2px auto 0}
-.gantt{background:#fff;border-radius:var(--r);padding:var(--s3) var(--s4);position:relative}
-.g-row{display:grid;grid-template-columns:200px repeat(12,1fr);align-items:center;min-height:44px;border-bottom:1px solid rgba(90,62,43,.12);position:relative}
-.g-row:last-child{border-bottom:0}
-.g-row .nm{font-weight:600;font-size:.95rem;padding-right:var(--s3);display:flex;align-items:center;gap:var(--s2)}
-.g-row .nm i{width:10px;height:10px;border-radius:2px;flex:none}
-.bar{height:16px;border-radius:8px;grid-row:1;align-self:center;opacity:.95}
-.g-row.dim .bar{opacity:.25}
-.g-row.dim .nm{color:#8a8d82}
-.cur{position:absolute;top:0;bottom:0;background:rgba(229,181,67,.18);border-left:2px solid var(--sun);border-right:2px solid var(--sun);pointer-events:none;transition:left .3s}
-.g-wrap{overflow-x:auto}
-.g-inner{min-width:760px}
-.advice{display:grid;grid-template-columns:1fr 1fr 1fr;gap:var(--s4);margin-top:var(--s5)}
-.advice > div{background:var(--cream);border-radius:var(--r);padding:var(--s4);border:1px solid rgba(90,62,43,.18)}
-.advice h3{font-size:1.15rem;color:var(--lawn-d);margin-bottom:var(--s3)}
-.advice ul{list-style:none;margin:0;padding:0}
-.advice li{padding:var(--s2) 0;border-top:1px dashed rgba(90,62,43,.25);font-size:.98rem}
-.advice li:first-child{border-top:0}
-.advice .empty{color:var(--muted);font-size:.95rem}
-.advice .book{background:var(--lawn);color:#fff;border-color:var(--lawn)}
-.advice .book h3{color:#fff}
-.advice .book li{border-top-color:rgba(255,255,255,.3)}
-.advice .book .empty{color:#e4efd9}
-.note{font-size:.88rem;color:var(--muted);margin-top:var(--s4)}
+.strata{list-style:none;margin:0;padding:0;position:relative}
+.layer{display:grid;grid-template-columns:96px 1fr 1.25fr;gap:var(--s5);padding:var(--s5) 0;border-top:1px solid rgba(243,234,219,.16);position:relative}
+.layer:last-child{border-bottom:1px solid rgba(243,234,219,.16)}
+.depth{position:relative;font-weight:700;font-size:.92rem;color:var(--marigold);font-variant-numeric:tabular-nums;padding-top:6px}
+.depth::after{content:"";position:absolute;right:0;top:0;bottom:calc(-1 * var(--s5) - var(--s5));width:2px;background:repeating-linear-gradient(180deg,var(--marigold) 0 2px,transparent 2px 10px);opacity:.55}
+.layer:last-child .depth::after{bottom:calc(-1 * var(--s5))}
+.layer h3{font-size:clamp(1.7rem,2.8vw,2.4rem);font-variation-settings:"wdth" 80;letter-spacing:-.02em}
+.layer p{color:var(--bone-2);max-width:32em}
+.layer .jobs{display:flex;flex-wrap:wrap;gap:var(--s2);margin-top:var(--s3);padding:0;list-style:none}
+.layer .jobs li{font-size:.92rem;font-weight:600;padding:var(--s1) var(--s3);border-radius:999px;background:rgba(243,234,219,.1);color:var(--bone)}
+.strata-note{font-size:.88rem;color:#b9a88f;margin-top:var(--s4)}
 
-/* reviews */
-.reviews{padding:var(--s8) 0}
-.rv{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--s5);margin-top:var(--s6)}
-.rv figure{margin:0;padding:var(--s5) var(--s4) var(--s4);background:#fff;border-radius:var(--r);position:relative;border-bottom:6px solid var(--lawn)}
-.rv figure:nth-child(2){transform:translateY(var(--s5));border-bottom-color:var(--soil-l)}
-.rv blockquote{margin:0;font-family:var(--serif);font-size:1.2rem;line-height:1.5;color:var(--ink)}
-.rv figcaption{margin-top:var(--s4);font-weight:700;color:var(--soil);font-size:.95rem}
-.rv .q{position:absolute;top:-22px;left:var(--s4);width:44px;height:44px;border-radius:50%;background:var(--lawn);display:grid;place-items:center}
-.rv .q svg{width:20px;height:20px}
+/* the sprinkler line crossing the page */
+.pipeline{display:block;width:100%;height:auto;background:var(--loam)}
+.pipeline .pipe{stroke:var(--water);stroke-width:8;fill:none}
+.pipeline .riser{stroke:var(--water);stroke-width:5}
+.pipeline .head{fill:#1b1410;stroke:var(--water-l);stroke-width:2}
+.pipeline .tee{fill:var(--water)}
 
-/* visit */
-.visit{background:var(--lawn-d);color:#eef3e6;padding:var(--s8) 0;position:relative;overflow:hidden}
-.visit::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(135deg,rgba(255,255,255,.035) 0 60px,transparent 60px 120px)}
-.visit .wrap{position:relative;display:grid;grid-template-columns:1fr 1fr 1fr;gap:var(--s6)}
-.visit h2{color:#fff}
-.visit h3{font-size:1.2rem;color:#fff;margin-bottom:var(--s3)}
-.visit p{color:#d5e1c9}
-.visit .tel{font-family:var(--serif);font-size:1.7rem;color:#fff;text-decoration:none;display:inline-block;min-height:44px}
-.hours{width:100%;border-collapse:collapse}
-.hours td{padding:var(--s2) 0;border-bottom:1px dashed rgba(255,255,255,.25)}
-.hours td+td{text-align:right;font-weight:700;color:#fff}
+/* clay layer: Joe, hours, rating */
+.clay{background:var(--clay);color:#fff4e6}
+.clay .wrap{padding-top:var(--s7);padding-bottom:var(--s7)}
+.joe{display:grid;grid-template-columns:1.25fr .9fr;gap:var(--s5)}
+.joe h2{font-size:clamp(2.4rem,5.4vw,4.6rem);font-variation-settings:"wdth" 75;letter-spacing:-.03em;line-height:.95}
+.joe .big-tel{display:inline-block;margin-top:var(--s4);font-size:clamp(2rem,4.6vw,3.6rem);font-weight:800;letter-spacing:-.02em;text-decoration:none;color:#fff;font-variation-settings:"wdth" 80;line-height:1.1;border-bottom:4px solid var(--marigold);font-variant-numeric:tabular-nums}
+.joe .big-tel:hover{color:var(--marigold)}
+.joe-p{color:#f6dcc4;margin-top:var(--s4);max-width:30em}
+.facts{display:grid;gap:var(--s4);align-content:start}
+.fact{border-top:2px solid rgba(255,244,230,.35);padding-top:var(--s3)}
+.fact h3{font-size:1.05rem;font-weight:700;letter-spacing:0;font-variation-settings:"wdth" 100;margin-bottom:var(--s2);color:#ffd99a}
+.fact p{color:#fff4e6}
+.fact .score-row{display:flex;align-items:center;gap:var(--s3)}
+.fact .score-row b{font-size:2.6rem;line-height:1;font-variation-settings:"wdth" 75}
+.fact a{color:#fff;font-weight:700}
+.hrs{width:100%;border-collapse:collapse}
+.hrs td{padding:var(--s1) 0}
+.hrs td+td{text-align:right;font-weight:700}
 
-/* contact */
-.contact{padding:var(--s8) 0}
-.ct{display:grid;grid-template-columns:.8fr 1.2fr;gap:var(--s7)}
-.ct .lede{color:var(--muted);margin-top:var(--s3)}
-.form{background:#fff;border-radius:var(--r);padding:var(--s5);border-top:6px solid var(--lawn)}
+/* towns: glacial sand */
+.towns{background:var(--sand-2);color:var(--ink)}
+.towns .wrap{padding-top:var(--s6);padding-bottom:var(--s6);display:grid;grid-template-columns:1fr 1.6fr;gap:var(--s5);align-items:start}
+.towns h2{font-size:clamp(1.9rem,3.6vw,2.8rem);font-variation-settings:"wdth" 80;letter-spacing:-.02em;line-height:1}
+.towns .t-note{color:var(--ink-2);margin-top:var(--s3);font-size:.95rem;max-width:26em}
+.town-list{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:var(--s2) var(--s4);font-size:clamp(1.4rem,2.6vw,2rem);font-weight:700;font-variation-settings:"wdth" 80;letter-spacing:-.01em;line-height:1.25}
+.town-list li{display:flex;align-items:center;gap:var(--s3)}
+.town-list li+li::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--clay);flex:none}
+.town-list .home{color:var(--clay-d)}
+
+/* estimate: sand */
+.estimate{background:var(--sand);color:var(--ink)}
+.estimate .wrap{padding-top:var(--s7);padding-bottom:var(--s7);display:grid;grid-template-columns:.85fr 1.15fr;gap:var(--s6);align-items:start}
+.estimate h2{font-size:clamp(2.4rem,5.4vw,4.6rem);font-variation-settings:"wdth" 75;letter-spacing:-.03em;line-height:.95}
+.estimate .e-p{color:var(--ink-2);margin-top:var(--s4);max-width:28em}
+.estimate .e-p a{font-weight:700;color:var(--ink)}
+.form{background:#fbf5e8;border-radius:20px;padding:var(--s5);box-shadow:0 2px 0 var(--sand-2)}
 .fgrid{display:grid;grid-template-columns:1fr 1fr;gap:var(--s4)}
-.field{display:flex;flex-direction:column;gap:var(--s2)}
+.field{display:flex;flex-direction:column;gap:var(--s2);min-width:0}
 .field.full{grid-column:1/-1}
-.field>label,.field legend{font-weight:700;font-size:.92rem;color:var(--lawn-d);padding:0}
-.field input,.field textarea{font:inherit;font-size:1rem;min-height:52px;padding:var(--s3);border:2px solid #d7cdb6;border-radius:var(--r);background:var(--cream);color:var(--ink)}
-.field textarea{min-height:110px;resize:vertical}
-.field input:focus,.field textarea:focus{outline:none;border-color:var(--lawn);background:#fff}
+.field>label,.field legend{font-weight:700;font-size:.95rem;padding:0}
+.field input,.field textarea,.field select{font:inherit;font-size:1rem;min-height:54px;padding:var(--s3);border:2px solid #cdb68a;border-radius:12px;background:#fff;color:var(--ink);width:100%}
+.field textarea{min-height:112px;resize:vertical}
+.field input:focus,.field textarea:focus,.field select:focus{outline:3px solid var(--water);outline-offset:1px;border-color:var(--ink)}
 fieldset.field{border:0;margin:0;padding:0}
 .checks{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--s2);margin-top:var(--s1)}
-.checks label{display:flex;align-items:center;gap:var(--s2);min-height:48px;padding:0 var(--s3);border:2px solid #e2d9c4;border-radius:var(--r);cursor:pointer;font-size:.95rem;font-weight:600}
-.checks input{width:20px;height:20px;accent-color:var(--lawn);flex:none}
-.checks label:has(input:checked){border-color:var(--lawn);background:#eef5e6}
-.msg{display:none;color:#9b2c1f;font-size:.85rem;font-weight:700}
+.checks label{display:flex;align-items:center;gap:var(--s2);min-height:50px;padding:0 var(--s3);border:2px solid #dcc79c;border-radius:12px;cursor:pointer;font-size:.95rem;font-weight:600;background:#fff;line-height:1.2}
+.checks input{width:20px;height:20px;accent-color:var(--clay);flex:none;margin:0}
+.checks label:has(input:checked){border-color:var(--clay);background:#f8e7d6}
+.msg{display:none;color:#9b2c1f;font-size:.88rem;font-weight:700}
 .field.err .msg{display:block}
 .field.err input,.field.err textarea{border-color:#9b2c1f}
-.demo-note{font-size:.85rem;color:var(--muted);margin:var(--s3) 0 0}
-.done{background:#fff;border-radius:var(--r);padding:var(--s6) var(--s5);border-top:6px solid var(--lawn)}
-.done h3{font-size:1.8rem;color:var(--lawn-d);margin-bottom:var(--s3)}
+.submit{width:100%;margin-top:var(--s4)}
+.demo-note{font-size:.88rem;color:var(--ink-2);margin-top:var(--s3)}
+.done{background:#fbf5e8;border-radius:20px;padding:var(--s5)}
+.done h3{font-size:2rem;margin-bottom:var(--s3);font-variation-settings:"wdth" 80}
+.done p{margin-bottom:var(--s4);color:var(--ink-2)}
 .done:focus{outline:none}
 
-footer{background:var(--soil-d);color:#e3d8c8;padding:var(--s7) 0 var(--s6);font-size:.95rem}
-.ft{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:var(--s6)}
-footer h4{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:#fff;margin:0 0 var(--s3)}
+/* bedrock footer */
+footer{background:var(--rock);color:var(--bone-2);font-size:.95rem}
+footer .wrap{padding-top:var(--s6);padding-bottom:var(--s6)}
+.ft{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:var(--s5)}
+.ft b{display:block;color:#fff;font-size:1.05rem;margin-bottom:var(--s2)}
+.ft p+p{margin-top:var(--s1)}
 footer a{color:#fff}
-footer p{margin:0 0 var(--s2)}
-.disc{margin-top:var(--s6);padding-top:var(--s4);border-top:1px solid rgba(255,255,255,.15);font-size:.86rem;color:#c7b9a5;max-width:72em}
+.disc{margin-top:var(--s5);padding-top:var(--s4);border-top:1px solid rgba(255,255,255,.14);font-size:.86rem;color:#b3a794;max-width:72em}
 .sticky-call{display:none}
 
-@media (max-width:1024px){
- .ledger{grid-template-columns:1fr 1fr}
- .sv-head,.ct{grid-template-columns:1fr}
- .advice{grid-template-columns:1fr}
- .rv{grid-template-columns:1fr}
- .rv figure:nth-child(2){transform:none}
- .rv{gap:var(--s6)}
- .visit .wrap{grid-template-columns:1fr 1fr}
- .visit .wrap > div:first-child{grid-column:1/-1}
- .proof .wrap{grid-template-columns:1fr 1fr}
- .proof .p:nth-child(3){border-left:0}
- .proof .p:nth-child(n+3){border-top:1px solid rgba(255,255,255,.2)}
+@media (max-width:1000px){
+ .hero-grid,.sec-h,.joe,.estimate .wrap,.towns .wrap{grid-template-columns:1fr}
+ .spray{max-width:420px;justify-self:end;width:70%;margin-top:calc(-1 * var(--s5))}
+ .rating{padding-bottom:0}
+ .layer{grid-template-columns:80px 1fr;gap:var(--s2) var(--s4)}
+ .layer > div:last-child{grid-column:2}
+ .ft{grid-template-columns:1fr 1fr}
+ .ft > div:first-child{grid-column:1/-1}
 }
-@media (max-width:900px){
- nav#nav{display:none;position:absolute;left:0;right:0;top:100%;background:var(--cream);border-bottom:2px solid var(--lawn)}
+@media (max-width:860px){
+ nav#nav{display:none;position:absolute;left:0;right:0;top:100%;background:var(--sky);border-bottom:2px solid var(--ink);z-index:40}
  nav#nav.open{display:block}
- nav#nav ul{flex-direction:column;gap:0;padding:var(--s2) var(--s5) var(--s4)}
- nav#nav a{display:block;border-bottom:1px solid rgba(90,62,43,.15)}
- .menu-btn{display:inline-flex;align-items:center;justify-content:center}
- .ft{grid-template-columns:1fr}
+ nav#nav ul{flex-direction:column;gap:0;padding:0 var(--s5) var(--s3)}
+ nav#nav a{display:flex;border-top:1px solid rgba(29,25,21,.15);min-height:52px}
+ header{position:relative}
+ .menu-btn{display:inline-flex}
 }
 @media (max-width:640px){
  body{font-size:17px}
  .wrap{padding:0 var(--s3)}
+ nav#nav ul{padding:0 var(--s3) var(--s3)}
  .hd-r .btn{display:none}
- .brand b{font-size:1.1rem}
- .hero{min-height:0;display:block}
- .hero .wrap{padding-top:260px;padding-bottom:var(--s5)}
- .card{padding:var(--s6) var(--s4) var(--s4)}
- .card::before{left:var(--s4);right:var(--s4)}
- .ledger{grid-template-columns:1fr}
- .se-head{grid-template-columns:1fr}
- .g-inner{min-width:0}
- .months{grid-template-columns:repeat(6,1fr);padding:0 0 var(--s3);gap:var(--s1)}
- .months > span{display:none}
- .months button{border:1px solid rgba(90,62,43,.2);background:var(--cream)}
- .gantt{padding:var(--s2) var(--s3)}
- .g-row{grid-template-columns:118px repeat(12,1fr);min-height:40px}
- .g-row .nm{font-size:.8rem;padding-right:var(--s2);line-height:1.2}
- .bar{height:12px}
- .visit .wrap{grid-template-columns:1fr}
+ .brand b{font-size:1.6rem}
+ .brand span{font-size:.85rem}
+ .hero{padding-top:var(--s4)}
+ .hero h1{font-size:clamp(3rem,15.5vw,4.4rem)}
+ .lede{font-size:1.08rem}
+ .acts .btn{flex:1 1 100%}
+ .rating{flex-wrap:wrap;gap:var(--s2) var(--s3)}
+ .spray{width:88%;margin-top:var(--s4)}
+ .ground .wrap{padding-top:var(--s6)}
+ .roots{height:72px}
+ .layer{grid-template-columns:56px 1fr;gap:var(--s2) var(--s3);padding:var(--s4) 0}
+ .depth{font-size:.8rem;line-height:1.25}
+ .depth::after{display:none}
+ .clay .wrap,.estimate .wrap{padding-top:var(--s6);padding-bottom:var(--s6)}
+ .form,.done{padding:var(--s4) var(--s3)}
  .fgrid{grid-template-columns:1fr}
  .checks{grid-template-columns:1fr 1fr}
- .form{padding:var(--s4)}
- .proof .p{padding:var(--s3)}
- .proof b{font-size:1.3rem}
- .sticky-call{display:flex;position:fixed;left:var(--s3);right:var(--s3);bottom:var(--s3);z-index:60;min-height:56px;box-shadow:0 10px 30px rgba(0,0,0,.3)}
- footer{padding-bottom:112px}
+ .ft{grid-template-columns:1fr}
+ .sticky-call{display:flex;position:fixed;left:var(--s3);right:var(--s3);bottom:var(--s3);z-index:60;box-shadow:0 10px 30px rgba(0,0,0,.35);transform:translateY(calc(100% + var(--s4)));transition:transform .25s ease}
+ .sticky-call.show{transform:none}
+ footer .wrap{padding-bottom:120px}
 }
 @media (prefers-reduced-motion:reduce){
  html{scroll-behavior:auto}
  *,*::before,*::after{animation:none!important;transition:none!important}
+ .arc{stroke-dasharray:.1 16}
 }
 </style>
 </head>
@@ -241,23 +237,19 @@ footer p{margin:0 0 var(--s2)}
 <a class="skip" href="#main">Skip to content</a>
 <div class="concept">Website concept by <a href="https://www.lisettecolon.com">Lisette Colon</a>. A sample, not the official Falzone Landscaping and Design site.</div>
 
-<header class="site">
+<header>
  <div class="wrap hd">
-  <a class="brand" href="#top" aria-label="Falzone Landscaping and Design, home">
-   <svg viewBox="0 0 46 46" aria-hidden="true"><circle cx="23" cy="23" r="22" fill="#2f6b2f"/><path d="M8 31h30" stroke="#f6f1e4" stroke-width="2"/><path d="M12 31c0-6 2-10 4-12M17 31c0-8 2-12 5-15M23 31c0-9 1-14 3-17M29 31c0-7 2-11 5-13" stroke="#f6f1e4" stroke-width="2" fill="none" stroke-linecap="round"/><path d="M8 35h30" stroke="#8a6a4f" stroke-width="3"/></svg>
-   <span><b>Falzone</b><small>Landscaping and Design</small></span>
-  </a>
+  <a class="brand" href="#top" aria-label="Falzone Landscaping and Design, home"><b>Falzone</b><span>Landscaping and Design</span></a>
   <nav id="nav" aria-label="Main">
    <ul>
     <li><a href="#services">Services</a></li>
-    <li><a href="#season">Lawn calendar</a></li>
-    <li><a href="#reviews">Reviews</a></li>
-    <li><a href="#visit">Hours</a></li>
-    <li><a href="#contact">Free quote</a></li>
+    <li><a href="#joe">Hours</a></li>
+    <li><a href="#towns">Towns</a></li>
+    <li><a href="#estimate">Free estimate</a></li>
    </ul>
   </nav>
   <div class="hd-r">
-   <a class="btn btn-lawn" href="tel:+16313717043"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2"/></svg>(631) 371-7043</a>
+   <a class="btn btn-ink" href="tel:+16313717043"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2"/></svg>(631) 371-7043</a>
    <button class="menu-btn" aria-expanded="false" aria-controls="nav" aria-label="Menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h18"/></svg></button>
   </div>
  </div>
@@ -265,160 +257,111 @@ footer p{margin:0 0 var(--s2)}
 
 <main id="main">
 <section class="hero" id="top">
- <svg class="lawn" viewBox="0 0 1440 640" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-  <defs>
-   <pattern id="stripes" width="180" height="180" patternUnits="userSpaceOnUse" patternTransform="rotate(-24)"><rect width="180" height="180" fill="#3b7a37"/><rect width="90" height="180" fill="#2f6b2f"/></pattern>
-   <radialGradient id="mist" cx="0" cy="0" r="1"><stop offset="0" stop-color="#dff0ff" stop-opacity=".55"/><stop offset="1" stop-color="#dff0ff" stop-opacity="0"/></radialGradient>
-   <pattern id="mulch" width="16" height="16" patternUnits="userSpaceOnUse"><rect width="16" height="16" fill="#5a3e2b"/><path d="M2 4l5 2M9 11l5-2M4 13l3-3" stroke="#7a573e" stroke-width="1.4"/></pattern>
-  </defs>
-  <rect width="1440" height="640" fill="url(#stripes)"/>
-  <!-- bed along the right and bottom -->
-  <path d="M1440 0 V640 H760 C 900 600, 1000 560, 1080 470 C 1160 380, 1180 250, 1260 160 C 1310 100, 1380 60, 1440 0Z" fill="url(#mulch)"/>
-  <path d="M760 640 C 900 600, 1000 560, 1080 470 C 1160 380, 1180 250, 1260 160 C 1310 100, 1380 60, 1440 0" fill="none" stroke="#c9b48f" stroke-width="6"/>
-  <g stroke="#1f4d20" stroke-width="1.5">
-   <circle cx="1350" cy="200" r="46" fill="#4b8a3f"/><circle cx="1260" cy="330" r="38" fill="#5a9a49"/><circle cx="1370" cy="390" r="52" fill="#3f7c35"/><circle cx="1180" cy="480" r="34" fill="#5a9a49"/><circle cx="1290" cy="520" r="40" fill="#4b8a3f"/><circle cx="1060" cy="590" r="30" fill="#3f7c35"/><circle cx="1400" cy="590" r="40" fill="#5a9a49"/>
-  </g>
-  <g>
-   <g fill="#e8a33d"><circle cx="1340" cy="190" r="5"/><circle cx="1362" cy="206" r="5"/><circle cx="1346" cy="214" r="5"/><circle cx="1376" cy="380" r="5"/><circle cx="1356" cy="398" r="5"/><circle cx="1384" cy="404" r="5"/></g>
-   <g fill="#f3ead6"><circle cx="1256" cy="322" r="5"/><circle cx="1270" cy="336" r="5"/><circle cx="1178" cy="476" r="5"/><circle cx="1188" cy="488" r="5"/><circle cx="1290" cy="512" r="5"/><circle cx="1302" cy="526" r="5"/></g>
-   <g fill="#c55d4a"><circle cx="1060" cy="584" r="5"/><circle cx="1070" cy="596" r="5"/><circle cx="1396" cy="584" r="5"/><circle cx="1410" cy="598" r="5"/></g>
-  </g>
-  <!-- sprinkler heads with sweeping spray -->
-  <g transform="translate(820 180)"><path class="spray" d="M0 0 L190 -60 A200 200 0 0 1 190 60 Z" fill="url(#mist)" style="transform-origin:0 0"/><circle r="7" fill="#1f2419" stroke="#d8d1bf" stroke-width="2"/></g>
-  <g transform="translate(980 400)"><path class="spray b" d="M0 0 L-180 -70 A190 190 0 0 0 -180 70 Z" fill="url(#mist)" style="transform-origin:0 0"/><circle r="7" fill="#1f2419" stroke="#d8d1bf" stroke-width="2"/></g>
-  <g transform="translate(700 520)"><path class="spray c" d="M0 0 L60 -180 A190 190 0 0 1 180 -70 Z" fill="url(#mist)" style="transform-origin:0 0"/><circle r="7" fill="#1f2419" stroke="#d8d1bf" stroke-width="2"/></g>
-  <!-- zone label lines -->
-  <g font-family="Hanken Grotesk,system-ui,sans-serif" font-size="13" font-weight="700" letter-spacing="2" fill="#f6f1e4">
-   <text x="836" y="160">ZONE 1</text><text x="996" y="384">ZONE 2</text><text x="716" y="550">ZONE 3</text><text x="1180" y="620">FLOWER BED</text>
-  </g>
- </svg>
- <div class="wrap">
-  <div class="card">
-   <p class="tag"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 1c-3 4-5 6.5-5 9a5 5 0 0 0 10 0c0-2.5-2-5-5-9z" fill="#5a3e2b"/></svg>St. James, Long Island</p>
-   <h1>Green lawns, working sprinklers and beds that look cared for.</h1>
-   <p class="lede">Falzone Landscaping and Design installs and repairs sprinkler systems, lays sod and seed, brings in topsoil, builds flower beds and keeps properties tidy with cleanups and mowing.</p>
+ <div class="wrap hero-grid">
+  <div>
+   <h1>A good lawn starts below the grass.</h1>
+   <p class="lede">Falzone Landscaping and Design in St. James puts in and repairs sprinkler systems, lays sod and seed, brings in topsoil, builds flower beds, and keeps yards neat with cleanups and mowing.</p>
    <div class="acts">
-    <a class="btn btn-lawn" href="tel:+16313717043">Call (631) 371-7043</a>
-    <a class="btn btn-line" href="#contact">Get a free quote</a>
+    <a class="btn btn-gold" href="tel:+16313717043"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2"/></svg>Call Joe, (631) 371-7043</a>
+    <a class="btn btn-line" href="#estimate">Request a free estimate</a>
    </div>
-   <p class="joe">Ask for Joe. Rated 5.0 on Google from 29 reviews.</p>
+   <p class="rating"><span class="score">5.0</span>
+    <span class="stars" role="img" aria-label="5 out of 5 stars"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1l2.7 5.6 6.1.9-4.4 4.3 1 6.1L10 15l-5.4 2.9 1-6.1L1.2 7.5l6.1-.9z" fill="#c98a12"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1l2.7 5.6 6.1.9-4.4 4.3 1 6.1L10 15l-5.4 2.9 1-6.1L1.2 7.5l6.1-.9z" fill="#c98a12"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1l2.7 5.6 6.1.9-4.4 4.3 1 6.1L10 15l-5.4 2.9 1-6.1L1.2 7.5l6.1-.9z" fill="#c98a12"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1l2.7 5.6 6.1.9-4.4 4.3 1 6.1L10 15l-5.4 2.9 1-6.1L1.2 7.5l6.1-.9z" fill="#c98a12"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1l2.7 5.6 6.1.9-4.4 4.3 1 6.1L10 15l-5.4 2.9 1-6.1L1.2 7.5l6.1-.9z" fill="#c98a12"/></svg></span>
+    <span>from 29 reviews. <a href="https://www.google.com/maps/search/?api=1&amp;query=Falzone+Landscaping+and+Design+600+Middle+Country+Road+St.+James+NY" target="_blank" rel="noopener">Read them on Google</a></span></p>
+  </div>
+  <div class="spray" aria-hidden="true">
+   <svg viewBox="-10 30 420 300">
+    <path class="arc a0" d="M133.4 296.4A70 70 0 0 1 266.6 296.4"/><path class="arc a1" d="M85.9 280.9A120 120 0 0 1 314.1 280.9"/><path class="arc a2" d="M38.3 265.5A170 170 0 0 1 361.7 265.5"/><path class="arc a3" d="M-4.5 251.6A215 215 0 0 1 404.5 251.6"/>
+    <rect x="186" y="300" width="28" height="22" rx="3" fill="#2a2420"/>
+    <rect x="180" y="314" width="40" height="10" rx="2" fill="#1d1915"/>
+    <rect x="194" y="292" width="12" height="10" rx="2" fill="#3d8db2"/>
+   </svg>
   </div>
  </div>
+ <svg class="fringe" viewBox="0 112 1440 44" preserveAspectRatio="none" aria-hidden="true"><path class="gr" d="M0 152 Q0.2 140.5 -4.9 132.8 Q3.3 142.4 4.3 152Z M4 152 Q4.5 138.5 1.8 129.4 Q6.4 140.7 6.8 152Z M8 152 Q9.6 143.2 7.5 137.4 Q11.4 144.7 11.6 152Z M12 152 Q15.6 139.5 16.8 131.2 Q16.3 141.6 15.4 152Z M16 152 Q20.8 137.6 22.5 128.0 Q21.6 140.0 20.4 152Z M21 152 Q20.5 134.2 14.4 122.4 Q24.2 137.2 25.4 152Z M25 152 Q24.6 142.2 19.6 135.7 Q27.5 143.8 28.6 152Z M30 152 Q33.1 141.9 31.6 135.1 Q35.0 143.6 34.8 152Z M35 152 Q34.0 138.3 28.8 129.2 Q36.8 140.6 38.0 152Z M39 152 Q40.3 137.1 37.9 127.1 Q42.4 139.6 42.6 152Z M44 152 Q45.1 139.2 41.1 130.7 Q47.9 141.4 48.5 152Z M49 152 Q51.6 141.3 50.2 134.1 Q53.4 143.0 53.2 152Z M55 152 Q56.1 136.6 51.9 126.3 Q59.2 139.2 59.8 152Z M59 152 Q61.7 139.6 62.2 131.3 Q62.7 141.7 61.9 152Z M63 152 Q66.6 143.2 65.7 137.4 Q68.4 144.7 67.9 152Z M68 152 Q69.4 135.2 65.7 124.0 Q72.2 138.0 72.7 152Z M73 152 Q75.4 138.0 72.7 128.7 Q77.8 140.4 78.0 152Z M79 152 Q81.6 139.0 81.4 130.4 Q82.7 141.2 82.3 152Z M84 152 Q89.5 137.4 91.3 127.6 Q90.4 139.8 89.0 152Z M89 152 Q91.1 139.9 91.0 131.8 Q92.1 141.9 91.6 152Z M93 152 Q92.7 142.0 87.9 135.3 Q95.3 143.7 96.4 152Z M99 152 Q99.2 142.4 95.1 135.9 Q101.7 144.0 102.5 152Z M104 152 Q106.1 142.8 103.6 136.7 Q108.3 144.4 108.5 152Z M110 152 Q113.9 135.7 115.2 124.9 Q114.6 138.4 113.6 152Z M115 152 Q119.2 140.2 120.0 132.3 Q120.6 142.1 119.5 152Z M118 152 Q118.7 141.9 114.7 135.2 Q121.2 143.6 121.9 152Z M123 152 Q123.4 137.9 119.9 128.6 Q125.5 140.3 126.2 152Z M128 152 Q130.6 140.1 128.7 132.1 Q132.8 142.0 132.6 152Z M133 152 Q135.8 138.7 134.6 129.8 Q137.6 140.9 137.3 152Z M137 152 Q140.5 135.0 140.5 123.6 Q142.1 137.8 141.3 152Z M142 152 Q143.1 139.8 140.7 131.7 Q145.0 141.9 145.3 152Z M147 152 Q146.5 143.0 141.1 137.0 Q149.4 144.5 150.6 152Z M151 152 Q150.1 140.3 144.8 132.6 Q152.8 142.3 154.1 152Z M155 152 Q155.7 142.6 153.1 136.4 Q157.6 144.2 158.0 152Z M161 152 Q160.4 137.7 155.7 128.2 Q163.2 140.1 164.2 152Z M165 152 Q165.3 140.1 159.7 132.2 Q168.7 142.1 169.7 152Z M171 152 Q172.5 139.1 170.8 130.5 Q174.1 141.3 174.2 152Z M175 152 Q175.8 140.3 171.5 132.5 Q178.8 142.3 179.4 152Z M179 152 Q183.2 143.4 185.0 137.6 Q184.0 144.8 182.7 152Z M183 152 Q181.9 138.4 175.9 129.3 Q185.3 140.7 186.6 152Z M188 152 Q191.3 135.3 191.2 124.2 Q192.5 138.1 192.0 152Z M193 152 Q196.4 142.0 196.7 135.3 Q197.7 143.7 197.0 152Z M198 152 Q199.1 140.4 194.5 132.7 Q202.2 142.4 203.0 152Z M204 152 Q208.3 135.4 208.6 124.4 Q209.8 138.2 208.9 152Z M210 152 Q211.6 141.4 209.9 134.4 Q213.4 143.2 213.4 152Z M213 152 Q213.7 143.3 210.1 137.6 Q216.1 144.8 216.7 152Z M218 152 Q220.6 134.4 217.7 122.7 Q223.2 137.3 223.3 152Z M224 152 Q225.4 134.4 222.5 122.7 Q227.5 137.4 227.9 152Z M228 152 Q229.0 141.7 224.3 134.9 Q231.9 143.4 232.7 152Z M234 152 Q236.3 135.5 234.0 124.6 Q238.5 138.3 238.5 152Z M240 152 Q243.0 142.8 242.0 136.6 Q245.0 144.3 244.6 152Z M245 152 Q246.7 136.4 244.9 126.0 Q248.5 139.0 248.6 152Z M251 152 Q254.8 140.4 254.9 132.7 Q256.5 142.3 255.6 152Z M255 152 Q259.9 139.7 261.4 131.6 Q260.9 141.8 259.6 152Z M259 152 Q259.5 142.4 254.2 136.0 Q262.9 144.0 263.9 152Z M265 152 Q268.9 142.2 269.2 135.7 Q270.5 143.8 269.6 152Z M270 152 Q271.6 140.2 270.4 132.4 Q273.1 142.2 273.0 152Z M273 152 Q276.1 134.3 275.4 122.5 Q277.7 137.2 277.3 152Z M279 152 Q283.5 139.4 284.3 131.1 Q284.8 141.5 283.8 152Z M283 152 Q283.7 141.2 280.2 134.0 Q286.0 143.0 286.6 152Z M288 152 Q289.3 141.1 287.0 133.9 Q291.1 142.9 291.4 152Z M294 152 Q295.7 140.2 293.3 132.3 Q297.9 142.2 298.0 152Z M300 152 Q304.0 139.6 305.5 131.3 Q304.8 141.6 303.6 152Z M304 152 Q303.7 138.6 297.7 129.6 Q307.0 140.8 308.3 152Z M308 152 Q311.8 143.6 312.6 137.9 Q312.6 145.0 311.8 152Z M313 152 Q315.3 136.6 313.9 126.4 Q316.9 139.2 316.8 152Z M318 152 Q321.1 138.3 321.9 129.1 Q321.9 140.6 321.1 152Z M323 152 Q323.8 141.2 319.7 134.0 Q326.7 143.0 327.4 152Z M328 152 Q331.4 138.2 331.2 129.0 Q333.1 140.5 332.4 152Z M332 152 Q334.2 137.7 332.3 128.2 Q336.2 140.1 336.2 152Z M337 152 Q339.6 139.3 337.9 130.8 Q341.5 141.4 341.4 152Z M343 152 Q347.8 136.9 348.5 126.8 Q349.2 139.4 348.2 152Z M347 152 Q352.2 138.2 353.6 129.0 Q353.3 140.5 352.1 152Z M351 152 Q352.5 142.4 350.5 136.1 Q354.2 144.0 354.4 152Z M355 152 Q358.6 142.9 357.7 136.8 Q360.4 144.4 359.9 152Z M361 152 Q364.5 142.1 364.1 135.5 Q366.0 143.8 365.4 152Z M365 152 Q369.3 135.1 371.5 123.9 Q369.7 137.9 368.4 152Z M371 152 Q373.3 139.8 370.7 131.6 Q375.8 141.8 375.8 152Z M376 152 Q378.1 142.0 375.5 135.4 Q380.3 143.7 380.5 152Z M381 152 Q382.0 141.7 378.2 134.9 Q384.7 143.4 385.2 152Z M384 152 Q385.5 138.3 383.5 129.1 Q387.2 140.6 387.4 152Z M389 152 Q390.3 137.6 388.8 128.0 Q391.8 140.0 391.8 152Z M395 152 Q398.9 136.0 401.2 125.4 Q399.1 138.7 397.8 152Z M399 152 Q402.1 143.2 402.7 137.4 Q403.1 144.7 402.3 152Z M403 152 Q407.2 139.5 408.4 131.2 Q408.4 141.6 407.2 152Z M407 152 Q411.2 142.2 412.6 135.6 Q412.1 143.8 410.9 152Z M412 152 Q411.7 142.7 405.8 136.6 Q415.1 144.3 416.4 152Z M417 152 Q421.2 142.9 422.7 136.8 Q422.1 144.4 420.8 152Z M422 152 Q425.6 142.8 427.1 136.7 Q426.2 144.3 425.2 152Z M428 152 Q428.9 139.2 425.5 130.7 Q431.4 141.4 431.8 152Z M434 152 Q433.5 141.0 428.3 133.7 Q436.6 142.9 437.6 152Z M438 152 Q437.3 142.5 432.9 136.2 Q439.8 144.1 440.7 152Z M442 152 Q442.8 140.6 438.9 133.0 Q445.6 142.5 446.2 152Z M446 152 Q445.9 138.8 441.4 130.0 Q448.7 141.0 449.6 152Z M449 152 Q448.9 141.2 442.6 134.0 Q452.5 143.0 453.9 152Z M454 152 Q456.6 141.8 453.9 135.0 Q459.1 143.5 459.2 152Z M458 152 Q459.7 135.7 457.1 124.9 Q461.9 138.4 462.0 152Z M464 152 Q465.9 139.8 463.7 131.7 Q468.0 141.9 468.0 152Z M470 152 Q473.7 140.3 474.2 132.5 Q474.9 142.3 474.0 152Z M475 152 Q475.4 139.7 472.6 131.5 Q477.4 141.8 477.8 152Z M479 152 Q481.6 142.9 481.9 136.9 Q482.7 144.4 482.0 152Z M482 152 Q486.7 142.8 487.2 136.6 Q488.1 144.3 487.2 152Z M488 152 Q487.9 140.9 484.0 133.5 Q490.5 142.7 491.2 152Z M492 152 Q493.7 142.1 491.5 135.5 Q495.6 143.7 495.8 152Z M498 152 Q500.2 134.3 498.8 122.4 Q501.8 137.2 501.6 152Z M504 152 Q504.8 140.6 502.1 133.0 Q506.7 142.5 507.1 152Z M509 152 Q510.2 139.0 508.6 130.4 Q511.9 141.2 511.9 152Z M513 152 Q513.5 143.6 510.0 137.9 Q515.8 145.0 516.5 152Z M518 152 Q516.9 143.2 511.1 137.3 Q520.0 144.7 521.4 152Z M522 152 Q524.3 138.0 522.3 128.6 Q526.4 140.3 526.4 152Z M527 152 Q531.0 136.7 532.3 126.5 Q531.8 139.3 530.8 152Z M531 152 Q531.6 134.1 526.4 122.2 Q534.8 137.1 535.8 152Z M536 152 Q540.7 143.2 541.1 137.3 Q542.1 144.6 541.2 152Z M541 152 Q544.9 136.6 545.9 126.3 Q545.6 139.1 544.8 152Z M546 152 Q550.5 138.8 551.0 129.9 Q551.9 141.0 550.9 152Z M552 152 Q556.3 138.0 557.4 128.7 Q557.3 140.3 556.2 152Z M557 152 Q556.1 141.4 550.5 134.3 Q559.1 143.2 560.4 152Z M562 152 Q565.4 142.6 566.2 136.3 Q566.6 144.2 565.6 152Z M567 152 Q569.6 137.6 569.1 128.0 Q571.1 140.0 570.6 152Z M570 152 Q573.5 135.9 573.6 125.2 Q574.8 138.6 574.1 152Z M575 152 Q574.7 137.3 568.8 127.5 Q578.2 139.7 579.4 152Z M579 152 Q580.0 142.9 575.8 136.8 Q582.9 144.4 583.5 152Z M583 152 Q587.7 136.5 589.7 126.2 Q588.4 139.1 587.1 152Z M588 152 Q590.8 139.0 590.1 130.3 Q592.6 141.2 592.1 152Z M593 152 Q591.8 137.4 586.6 127.7 Q594.7 139.9 595.9 152Z M597 152 Q597.7 136.5 594.0 126.1 Q600.3 139.1 600.8 152Z M600 152 Q601.1 143.0 597.0 137.0 Q603.9 144.5 604.6 152Z M605 152 Q606.3 137.1 602.5 127.2 Q608.9 139.6 609.5 152Z M610 152 Q610.4 139.1 604.8 130.5 Q613.8 141.3 614.9 152Z M614 152 Q618.1 134.2 620.2 122.3 Q618.4 137.2 617.2 152Z M619 152 Q623.3 135.7 625.3 124.9 Q624.0 138.4 622.7 152Z M623 152 Q627.1 141.6 629.2 134.6 Q627.6 143.3 626.4 152Z M628 152 Q630.5 142.2 628.2 135.7 Q632.9 143.9 632.8 152Z M632 152 Q634.2 135.7 631.8 124.9 Q636.5 138.4 636.5 152Z M637 152 Q641.2 141.4 642.6 134.3 Q642.1 143.1 641.0 152Z M641 152 Q642.4 143.6 640.4 137.9 Q644.4 145.0 644.4 152Z M645 152 Q645.7 142.2 642.6 135.7 Q648.0 143.9 648.4 152Z M650 152 Q654.1 143.6 653.9 138.0 Q655.8 145.0 655.1 152Z M654 152 Q657.8 134.7 657.2 123.2 Q659.6 137.6 659.0 152Z M658 152 Q660.3 140.0 656.9 132.0 Q663.1 142.0 663.4 152Z M663 152 Q664.8 140.1 662.4 132.2 Q666.7 142.1 666.9 152Z M667 152 Q670.7 142.6 671.7 136.4 Q671.5 144.2 670.6 152Z M673 152 Q673.6 141.2 669.6 134.0 Q676.2 143.0 676.9 152Z M677 152 Q681.8 140.0 683.2 132.0 Q682.9 142.0 681.6 152Z M682 152 Q687.1 137.5 688.2 127.9 Q688.4 140.0 687.2 152Z M687 152 Q686.9 136.7 680.9 126.5 Q690.4 139.2 691.7 152Z M692 152 Q694.5 136.4 693.9 126.0 Q695.8 139.0 695.4 152Z M695 152 Q695.4 134.7 690.3 123.2 Q698.4 137.6 699.4 152Z M700 152 Q703.7 140.7 703.2 133.2 Q705.5 142.6 704.8 152Z M704 152 Q704.9 137.3 701.2 127.5 Q707.6 139.8 708.1 152Z M708 152 Q708.3 142.0 703.7 135.3 Q710.9 143.7 711.9 152Z M714 152 Q715.1 138.8 710.3 130.0 Q718.3 141.0 719.1 152Z M720 152 Q719.9 139.3 715.2 130.8 Q722.6 141.4 723.6 152Z M724 152 Q723.4 140.3 718.2 132.5 Q726.3 142.3 727.4 152Z M728 152 Q732.5 138.1 733.5 128.9 Q733.7 140.4 732.6 152Z M733 152 Q734.7 139.6 733.0 131.4 Q736.5 141.7 736.4 152Z M737 152 Q738.2 143.0 733.9 137.0 Q741.3 144.5 741.9 152Z M741 152 Q743.9 138.8 742.6 129.9 Q745.9 141.0 745.5 152Z M745 152 Q745.3 141.0 741.3 133.7 Q747.9 142.8 748.6 152Z M749 152 Q753.8 134.4 754.3 122.7 Q755.2 137.4 754.2 152Z M753 152 Q756.6 143.3 755.9 137.5 Q758.4 144.7 757.8 152Z M758 152 Q756.8 138.0 750.7 128.6 Q760.1 140.3 761.5 152Z M764 152 Q768.0 135.7 768.5 124.8 Q769.5 138.4 768.5 152Z M768 152 Q767.7 142.6 762.8 136.3 Q770.7 144.1 771.7 152Z M773 152 Q776.2 134.6 775.9 122.9 Q777.8 137.5 777.1 152Z M778 152 Q780.1 139.2 779.0 130.7 Q781.5 141.3 781.3 152Z M784 152 Q788.2 141.4 789.6 134.3 Q789.2 143.1 788.0 152Z M788 152 Q788.7 142.4 784.5 136.0 Q791.5 144.0 792.2 152Z M793 152 Q792.8 142.5 787.2 136.2 Q796.1 144.1 797.3 152Z M798 152 Q798.7 139.9 794.3 131.8 Q801.6 141.9 802.4 152Z M802 152 Q803.9 140.7 801.1 133.2 Q806.5 142.6 806.6 152Z M807 152 Q808.4 135.1 806.5 123.9 Q810.2 137.9 810.3 152Z M811 152 Q813.9 134.4 813.8 122.6 Q815.1 137.3 814.5 152Z M814 152 Q817.4 138.8 816.9 130.0 Q818.8 141.0 818.3 152Z M819 152 Q822.7 137.2 824.6 127.3 Q823.3 139.7 822.1 152Z M822 152 Q823.9 140.4 821.1 132.6 Q826.3 142.3 826.6 152Z M826 152 Q829.5 135.9 829.5 125.2 Q830.9 138.6 830.2 152Z M830 152 Q831.5 134.3 827.6 122.5 Q834.3 137.2 834.9 152Z M834 152 Q837.5 141.5 837.9 134.5 Q838.6 143.2 837.9 152Z M840 152 Q840.1 138.8 835.8 130.1 Q842.7 141.0 843.6 152Z M845 152 Q848.9 137.2 851.0 127.4 Q849.3 139.7 848.0 152Z M849 152 Q853.5 141.6 855.8 134.6 Q853.8 143.3 852.5 152Z M853 152 Q854.6 143.0 851.3 137.0 Q857.3 144.5 857.6 152Z M859 152 Q863.8 136.6 865.5 126.3 Q864.8 139.1 863.4 152Z M863 152 Q867.5 141.8 869.0 135.0 Q868.6 143.5 867.4 152Z M866 152 Q867.6 137.2 864.7 127.4 Q869.8 139.7 870.2 152Z M871 152 Q869.8 142.0 863.8 135.3 Q872.9 143.6 874.3 152Z M875 152 Q875.5 134.4 869.9 122.7 Q879.0 137.4 880.1 152Z M879 152 Q883.3 140.2 883.7 132.3 Q884.7 142.1 883.8 152Z M884 152 Q885.5 143.1 883.4 137.2 Q887.4 144.6 887.5 152Z M890 152 Q891.2 141.7 887.6 134.9 Q894.0 143.5 894.3 152Z M893 152 Q897.1 139.7 897.5 131.4 Q898.5 141.7 897.7 152Z M897 152 Q896.7 143.3 890.6 137.4 Q900.3 144.7 901.6 152Z M901 152 Q904.9 136.4 906.4 126.0 Q905.7 139.0 904.5 152Z M905 152 Q907.5 134.4 906.7 122.7 Q908.9 137.3 908.6 152Z M910 152 Q910.6 140.6 907.2 132.9 Q912.7 142.5 913.3 152Z M916 152 Q918.9 134.8 917.6 123.3 Q921.0 137.7 920.6 152Z M919 152 Q921.6 141.4 918.9 134.3 Q924.1 143.1 924.2 152Z M925 152 Q925.7 139.9 921.7 131.8 Q928.3 141.9 929.0 152Z M930 152 Q930.4 134.7 925.5 123.2 Q933.6 137.6 934.5 152Z M935 152 Q938.9 135.7 939.1 124.8 Q940.2 138.4 939.5 152Z M940 152 Q941.1 140.5 937.6 132.9 Q943.7 142.4 944.1 152Z M943 152 Q946.4 141.7 946.8 134.8 Q947.5 143.4 946.8 152Z M947 152 Q949.1 143.3 947.7 137.5 Q950.7 144.7 950.6 152Z M953 152 Q957.4 135.1 959.7 123.9 Q957.8 137.9 956.4 152Z M957 152 Q958.8 142.7 956.6 136.5 Q961.0 144.2 961.0 152Z M961 152 Q962.9 141.4 960.0 134.3 Q965.2 143.1 965.4 152Z M966 152 Q970.5 136.4 971.3 126.0 Q971.7 139.0 970.7 152Z M970 152 Q971.1 135.5 967.3 124.5 Q973.8 138.3 974.3 152Z M975 152 Q974.7 136.5 970.4 126.2 Q977.3 139.1 978.1 152Z M979 152 Q983.0 142.1 984.1 135.5 Q984.0 143.8 982.9 152Z M983 152 Q987.8 139.8 990.0 131.7 Q988.5 141.8 987.1 152Z M987 152 Q990.5 135.8 989.3 125.1 Q992.5 138.5 992.1 152Z M991 152 Q995.0 139.0 995.4 130.4 Q996.5 141.2 995.6 152Z M997 152 Q997.1 143.2 993.8 137.4 Q999.3 144.7 999.9 152Z M1001 152 Q1003.5 134.3 1001.8 122.4 Q1005.7 137.2 1005.5 152Z M1005 152 Q1006.6 135.3 1004.4 124.1 Q1008.5 138.1 1008.6 152Z M1011 152 Q1010.4 134.5 1005.0 122.9 Q1013.6 137.4 1014.7 152Z M1016 152 Q1016.5 141.5 1013.7 134.5 Q1018.5 143.3 1018.9 152Z M1020 152 Q1022.3 141.2 1021.0 133.9 Q1024.2 143.0 1023.9 152Z M1024 152 Q1024.8 143.5 1021.2 137.8 Q1027.5 144.9 1028.0 152Z M1028 152 Q1028.2 140.6 1023.4 133.0 Q1031.3 142.5 1032.1 152Z M1032 152 Q1032.1 143.0 1026.8 137.0 Q1035.1 144.5 1036.2 152Z M1037 152 Q1036.7 137.5 1031.6 127.8 Q1039.5 139.9 1040.6 152Z M1043 152 Q1043.1 139.7 1039.5 131.4 Q1045.6 141.7 1046.2 152Z M1048 152 Q1050.7 140.6 1049.4 133.0 Q1052.3 142.5 1052.1 152Z M1053 152 Q1057.6 135.3 1059.9 124.2 Q1058.1 138.1 1056.7 152Z M1057 152 Q1056.8 136.6 1052.8 126.4 Q1059.1 139.2 1060.0 152Z M1063 152 Q1066.4 139.5 1067.2 131.2 Q1067.4 141.6 1066.5 152Z M1068 152 Q1068.0 139.2 1063.7 130.6 Q1070.5 141.3 1071.5 152Z M1073 152 Q1077.2 137.4 1079.0 127.7 Q1077.6 139.9 1076.5 152Z M1078 152 Q1080.0 140.0 1078.4 132.1 Q1081.7 142.0 1081.6 152Z M1083 152 Q1086.6 138.6 1088.5 129.7 Q1087.0 140.8 1085.8 152Z M1087 152 Q1091.6 135.9 1093.8 125.1 Q1092.0 138.6 1090.7 152Z M1091 152 Q1095.8 134.5 1097.8 122.9 Q1096.4 137.5 1095.1 152Z M1095 152 Q1096.5 134.7 1093.2 123.2 Q1099.2 137.6 1099.5 152Z M1100 152 Q1100.2 135.7 1095.0 124.8 Q1103.4 138.4 1104.4 152Z M1104 152 Q1108.1 139.7 1108.7 131.5 Q1109.5 141.8 1108.5 152Z M1108 152 Q1109.3 141.5 1106.4 134.5 Q1111.6 143.3 1111.8 152Z M1112 152 Q1113.1 142.4 1108.7 136.0 Q1116.0 144.0 1116.7 152Z M1118 152 Q1120.6 143.2 1118.9 137.3 Q1122.7 144.7 1122.5 152Z M1122 152 Q1121.6 135.6 1116.2 124.6 Q1124.7 138.3 1125.8 152Z M1126 152 Q1127.3 137.6 1123.8 128.0 Q1129.8 140.0 1130.3 152Z M1131 152 Q1134.3 139.5 1133.7 131.2 Q1135.8 141.6 1135.3 152Z M1136 152 Q1138.7 143.4 1137.7 137.6 Q1140.3 144.8 1140.0 152Z M1140 152 Q1143.6 136.3 1144.0 125.8 Q1144.8 138.9 1144.0 152Z M1144 152 Q1143.5 139.1 1138.6 130.4 Q1146.2 141.2 1147.3 152Z M1149 152 Q1150.3 142.7 1147.8 136.5 Q1152.5 144.3 1152.7 152Z M1152 152 Q1152.1 137.5 1146.4 127.8 Q1155.5 139.9 1156.7 152Z M1158 152 Q1157.2 138.7 1151.4 129.8 Q1160.4 140.9 1161.7 152Z M1162 152 Q1162.5 134.5 1157.0 122.8 Q1165.8 137.4 1166.8 152Z M1168 152 Q1171.6 136.6 1172.5 126.3 Q1172.4 139.1 1171.5 152Z M1174 152 Q1179.1 138.9 1180.5 130.1 Q1180.2 141.1 1178.9 152Z M1178 152 Q1182.0 136.0 1184.0 125.4 Q1182.3 138.7 1181.1 152Z M1182 152 Q1182.9 136.3 1177.6 125.9 Q1186.2 139.0 1187.2 152Z M1187 152 Q1186.6 135.8 1181.6 124.9 Q1189.6 138.5 1190.6 152Z M1192 152 Q1193.0 141.6 1189.0 134.7 Q1195.7 143.3 1196.4 152Z M1197 152 Q1196.5 143.2 1192.2 137.4 Q1199.1 144.7 1200.0 152Z M1202 152 Q1206.4 137.1 1208.0 127.1 Q1206.9 139.6 1205.8 152Z M1208 152 Q1210.3 142.5 1208.4 136.2 Q1212.3 144.1 1212.2 152Z M1212 152 Q1214.7 135.2 1213.1 124.0 Q1216.7 138.0 1216.5 152Z M1218 152 Q1223.0 142.6 1225.0 136.3 Q1223.7 144.2 1222.3 152Z M1223 152 Q1223.7 135.9 1219.3 125.2 Q1226.9 138.6 1227.5 152Z M1227 152 Q1230.9 140.1 1231.2 132.2 Q1232.1 142.1 1231.4 152Z M1231 152 Q1231.2 136.5 1225.1 126.1 Q1234.8 139.1 1236.1 152Z M1236 152 Q1240.4 137.5 1242.3 127.8 Q1241.1 139.9 1239.7 152Z M1241 152 Q1239.5 140.6 1233.8 133.0 Q1242.4 142.5 1243.8 152Z M1245 152 Q1246.2 137.7 1243.7 128.1 Q1248.4 140.1 1248.6 152Z M1250 152 Q1251.0 142.3 1246.5 135.9 Q1253.9 143.9 1254.6 152Z M1254 152 Q1254.7 143.6 1251.9 138.0 Q1256.7 145.0 1257.1 152Z M1258 152 Q1260.8 141.4 1259.5 134.4 Q1262.7 143.2 1262.5 152Z M1262 152 Q1263.8 137.6 1261.9 128.0 Q1265.5 140.0 1265.6 152Z M1268 152 Q1267.8 141.3 1263.2 134.1 Q1270.3 143.1 1271.3 152Z M1273 152 Q1276.7 135.2 1277.2 124.1 Q1277.8 138.0 1277.0 152Z M1277 152 Q1280.3 143.5 1279.4 137.8 Q1281.9 144.9 1281.5 152Z M1282 152 Q1283.9 137.4 1281.0 127.7 Q1286.5 139.8 1286.6 152Z M1287 152 Q1290.9 141.2 1292.8 134.0 Q1291.3 143.0 1290.2 152Z M1292 152 Q1292.0 139.7 1288.3 131.5 Q1294.3 141.8 1295.0 152Z M1297 152 Q1300.1 143.5 1298.1 137.8 Q1302.4 144.9 1302.3 152Z M1301 152 Q1303.8 141.7 1302.7 134.8 Q1305.6 143.4 1305.2 152Z M1306 152 Q1306.3 135.8 1301.8 125.0 Q1309.0 138.5 1310.0 152Z M1311 152 Q1315.1 143.1 1316.0 137.2 Q1316.2 144.6 1315.2 152Z M1316 152 Q1320.1 143.5 1320.7 137.9 Q1321.3 144.9 1320.4 152Z M1321 152 Q1322.0 136.5 1319.9 126.1 Q1323.9 139.1 1324.0 152Z M1324 152 Q1323.6 141.4 1317.8 134.3 Q1326.7 143.1 1328.0 152Z M1330 152 Q1333.8 136.9 1334.5 126.9 Q1335.1 139.4 1334.1 152Z M1334 152 Q1335.8 138.3 1332.9 129.1 Q1338.2 140.6 1338.4 152Z M1339 152 Q1341.9 141.1 1340.6 133.8 Q1344.0 142.9 1343.6 152Z M1343 152 Q1341.7 135.2 1335.9 123.9 Q1344.9 138.0 1346.2 152Z M1347 152 Q1351.5 136.5 1353.0 126.1 Q1352.5 139.0 1351.3 152Z M1351 152 Q1351.9 135.2 1348.7 123.9 Q1354.1 138.0 1354.6 152Z M1357 152 Q1360.1 137.5 1359.6 127.9 Q1361.7 140.0 1361.2 152Z M1363 152 Q1366.9 139.1 1367.6 130.5 Q1368.2 141.2 1367.2 152Z M1368 152 Q1371.8 139.4 1371.6 131.0 Q1373.2 141.5 1372.6 152Z M1373 152 Q1375.0 141.6 1374.4 134.6 Q1376.2 143.3 1375.9 152Z M1379 152 Q1377.5 142.2 1371.9 135.7 Q1380.4 143.8 1381.7 152Z M1384 152 Q1383.9 140.3 1379.3 132.5 Q1386.4 142.2 1387.4 152Z M1388 152 Q1390.9 137.0 1389.8 126.9 Q1392.7 139.5 1392.3 152Z M1393 152 Q1395.6 143.0 1394.5 136.9 Q1397.3 144.5 1397.0 152Z M1399 152 Q1402.6 135.7 1404.3 124.9 Q1403.0 138.4 1402.0 152Z M1404 152 Q1408.6 134.8 1410.7 123.4 Q1408.9 137.7 1407.7 152Z M1409 152 Q1408.2 142.5 1402.0 136.2 Q1411.9 144.1 1413.2 152Z M1414 152 Q1418.0 137.5 1418.6 127.9 Q1419.2 139.9 1418.3 152Z M1418 152 Q1418.3 142.6 1412.6 136.4 Q1421.6 144.2 1422.8 152Z M1422 152 Q1423.4 140.5 1421.2 132.9 Q1425.1 142.4 1425.3 152Z M1426 152 Q1429.5 140.9 1429.4 133.5 Q1430.7 142.7 1430.1 152Z M1431 152 Q1433.1 134.3 1430.8 122.6 Q1435.4 137.3 1435.4 152Z M1436 152 Q1437.2 143.3 1434.5 137.5 Q1439.4 144.8 1439.6 152Z"/><rect class="gr2" x="0" y="148" width="1440" height="8"/></svg>
 </section>
 
-<section class="proof" aria-label="At a glance">
+<section class="ground dark" id="services" aria-labelledby="svc-h">
+ <svg class="roots" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true"><path stroke-width="2.2" d="M10 0Q11 14 15 33 M52 0Q41 28 40 55 M96 0Q98 23 95 50 M133 0Q139 20 140 40 M159 0Q150 30 146 56 M193 0Q189 15 185 35 M219 0Q221 20 225 45 M251 0Q249 24 252 52 M296 0Q290 25 289 50 M329 0Q330 21 340 42 M368 0Q375 26 371 52 M413 0Q419 27 412 57 M458 0Q460 21 463 39 M488 0Q486 26 475 54 M533 0Q530 22 534 40 M572 0Q576 14 576 31 M612 0Q613 21 612 46 M660 0Q656 28 663 57 M704 0Q708 27 720 54 M739 0Q738 22 729 40 M774 0Q782 26 787 51 M806 0Q804 19 805 38 M844 0Q841 26 837 57 M877 0Q877 29 872 57 M918 0Q918 22 929 42 M953 0Q958 29 955 54 M988 0Q986 30 989 56 M1025 0Q1022 25 1022 46 M1059 0Q1068 17 1071 39 M1106 0Q1104 18 1107 39 M1146 0Q1143 19 1140 36 M1180 0Q1181 20 1171 37 M1212 0Q1212 18 1218 39 M1244 0Q1244 23 1244 49 M1282 0Q1289 27 1294 54 M1330 0Q1332 24 1333 51 M1364 0Q1370 19 1365 42 M1399 0Q1396 16 1400 31 M1433 0Q1427 15 1423 33"/><path stroke-width="1.5" d="M15 33Q20 44 30 50 M40 55Q36 69 33 88 M40 55Q24 73 19 94 M40 55Q36 73 44 92 M95 50Q93 64 80 73 M95 50Q95 65 105 85 M95 50Q89 63 88 76 M140 40Q134 55 131 66 M140 40Q137 56 143 68 M140 40Q151 58 153 70 M146 56Q129 74 114 89 M146 56Q140 73 123 94 M146 56Q156 72 154 91 M185 35Q180 43 170 50 M185 35Q189 48 187 61 M225 45Q224 62 223 77 M225 45Q224 62 212 72 M252 52Q254 68 267 77 M289 50Q284 63 270 78 M289 50Q289 66 299 79 M340 42Q350 51 353 65 M340 42Q341 52 334 68 M371 52Q376 67 372 86 M371 52Q371 69 371 88 M371 52Q386 70 396 85 M412 57Q417 78 415 98 M412 57Q402 72 397 89 M412 57Q416 79 413 101 M463 39Q464 48 476 59 M463 39Q462 55 455 65 M463 39Q461 52 453 65 M475 54Q466 69 452 90 M475 54Q483 73 481 89 M534 40Q525 54 528 67 M534 40Q527 54 527 64 M534 40Q539 56 538 71 M576 31Q574 45 582 53 M576 31Q574 42 568 48 M576 31Q574 42 581 55 M612 46Q616 63 631 74 M612 46Q614 61 614 80 M663 57Q673 75 685 96 M720 54Q738 69 748 88 M729 40Q727 51 729 64 M787 51Q790 66 797 85 M787 51Q799 67 810 80 M787 51Q793 64 806 81 M805 38Q812 50 812 61 M837 57Q846 73 850 86 M837 57Q828 76 829 92 M872 57Q870 79 870 100 M929 42Q933 58 931 72 M955 54Q964 69 973 79 M955 54Q949 67 943 81 M989 56Q994 79 991 99 M989 56Q984 76 973 95 M1022 46Q1029 60 1028 72 M1022 46Q1028 61 1031 77 M1071 39Q1072 48 1076 61 M1071 39Q1071 57 1065 69 M1107 39Q1109 51 1120 65 M1140 36Q1147 44 1144 58 M1140 36Q1134 47 1138 61 M1140 36Q1132 46 1123 58 M1171 37Q1175 49 1172 63 M1218 39Q1220 52 1214 61 M1218 39Q1215 52 1211 62 M1218 39Q1221 53 1217 70 M1244 49Q1236 63 1231 76 M1244 49Q1236 65 1226 84 M1294 54Q1292 72 1280 94 M1294 54Q1300 70 1316 80 M1333 51Q1345 66 1346 77 M1333 51Q1341 66 1351 80 M1365 42Q1366 57 1375 73 M1365 42Q1370 56 1362 66 M1365 42Q1366 57 1365 73 M1400 31Q1406 43 1403 53 M1400 31Q1402 42 1392 50 M1423 33Q1424 44 1429 57"/><path stroke-width="1.0" d="M30 50Q35 51 44 57 M44 57Q44 59 56 60 M33 88Q39 96 40 107 M40 107Q43 112 47 120 M40 107Q41 115 37 121 M33 88Q27 99 25 107 M25 107Q20 115 19 118 M25 107Q14 110 15 115 M19 94Q14 105 -2 114 M-2 114Q-8 119 -12 129 M19 94Q6 106 -8 118 M-8 118Q-21 123 -23 133 M-8 118Q-23 126 -26 130 M44 92Q39 102 42 116 M42 116Q40 121 45 130 M44 92Q43 103 32 113 M32 113Q26 121 26 125 M80 73Q75 87 80 95 M80 95Q76 102 73 109 M80 73Q82 86 78 95 M78 95Q77 99 71 105 M105 85Q106 98 117 106 M117 106Q120 111 128 119 M117 106Q119 113 116 121 M117 106Q116 114 123 119 M88 76Q83 84 77 92 M77 92Q75 98 66 98 M77 92Q74 101 71 106 M77 92Q75 100 71 102 M88 76Q88 87 90 97 M90 97Q85 106 89 113 M90 97Q93 102 90 112 M88 76Q91 87 83 94 M83 94Q88 99 85 107 M131 66Q126 77 127 84 M127 84Q123 92 121 96 M127 84Q127 90 116 94 M127 84Q121 93 124 97 M131 66Q135 76 133 86 M133 86Q140 89 141 95 M133 86Q129 91 133 100 M143 68Q139 79 144 86 M144 86Q143 89 145 97 M144 86Q148 88 141 95 M144 86Q149 93 153 97 M143 68Q135 78 137 87 M137 87Q141 94 136 100 M137 87Q135 95 131 100 M143 68Q143 78 141 88 M141 88Q132 93 134 98 M141 88Q143 96 145 100 M153 70Q156 81 162 87 M162 87Q161 93 163 99 M162 87Q167 91 173 94 M114 89Q102 101 100 116 M100 116Q94 123 86 133 M100 116Q102 128 97 138 M114 89Q113 99 104 115 M104 115Q105 127 102 134 M104 115Q100 123 89 128 M123 94Q118 109 122 119 M122 119Q126 127 119 134 M123 94Q120 110 110 124 M110 124Q108 133 110 145 M154 91Q159 99 169 105 M169 105Q165 110 173 118 M169 105Q180 111 180 114 M154 91Q158 102 161 118 M161 118Q165 124 164 137 M161 118Q159 128 160 137 M170 50Q171 55 160 59 M160 59Q156 59 152 62 M187 61Q182 65 180 75 M180 75Q176 80 181 85 M180 75Q172 81 170 82 M223 77Q223 84 232 96 M232 96Q230 104 238 110 M232 96Q239 102 243 104 M212 72Q202 84 201 90 M201 90Q191 96 190 96 M201 90Q191 92 190 97 M201 90Q193 99 196 104 M267 77Q266 84 272 93 M272 93Q269 95 270 103 M272 93Q272 94 279 101 M267 77Q266 86 268 96 M268 96Q268 102 262 109 M268 96Q272 102 267 110 M268 96Q270 101 265 110 M267 77Q277 87 279 97 M279 97Q280 102 288 112 M279 97Q279 103 278 113 M270 78Q265 86 267 96 M267 96Q264 101 259 109 M267 96Q266 103 271 110 M270 78Q267 89 263 103 M263 103Q259 111 260 119 M299 79Q301 85 296 96 M296 96Q296 104 300 108 M296 96Q292 103 289 106 M299 79Q305 89 302 99 M302 99Q301 107 306 113 M302 99Q304 105 301 115 M302 99Q304 105 303 114 M353 65Q362 69 360 80 M360 80Q367 85 367 90 M360 80Q361 86 369 89 M360 80Q363 85 364 91 M353 65Q362 69 365 76 M365 76Q367 81 368 87 M365 76Q367 77 371 82 M365 76Q366 79 370 84 M334 68Q340 75 334 87 M334 87Q337 93 341 100 M334 87Q334 91 339 99 M334 68Q324 75 322 82 M322 82Q317 83 309 87 M334 68Q342 75 338 88 M338 88Q333 94 333 102 M338 88Q343 93 337 102 M338 88Q342 91 344 99 M372 86Q371 95 372 107 M372 107Q375 117 374 122 M372 86Q377 97 376 109 M376 109Q375 119 373 125 M376 109Q373 117 371 124 M372 86Q373 97 364 110 M364 110Q364 115 365 125 M364 110Q361 114 356 122 M371 88Q373 102 380 112 M380 112Q379 124 379 133 M380 112Q376 118 383 127 M371 88Q376 101 376 111 M376 111Q379 116 387 122 M371 88Q362 98 363 113 M363 113Q354 121 354 132 M363 113Q355 122 357 132 M396 85Q409 91 420 95 M420 95Q424 100 430 104 M420 95Q424 99 429 110 M420 95Q423 100 432 109 M396 85Q401 97 408 114 M408 114Q415 125 415 139 M408 114Q417 123 420 130 M415 98Q415 108 422 123 M422 123Q432 129 433 137 M422 123Q417 131 420 137 M422 123Q424 132 424 139 M415 98Q425 107 425 120 M425 120Q436 129 439 132 M425 120Q428 126 438 128 M397 89Q391 98 395 111 M395 111Q391 117 388 123 M397 89Q384 97 382 107 M382 107Q380 111 370 114 M413 101Q413 116 419 134 M419 134Q424 141 429 153 M419 134Q418 142 414 155 M413 101Q424 113 426 131 M426 131Q427 141 434 155 M426 131Q425 138 432 151 M426 131Q431 143 428 155 M476 59Q471 66 476 74 M476 74Q478 80 480 82 M476 59Q482 65 488 73 M488 73Q492 80 491 87 M488 73Q494 76 498 78 M455 65Q457 76 448 83 M448 83Q450 86 444 93 M448 83Q452 89 445 94 M448 83Q444 89 439 90 M455 65Q448 71 439 80 M439 80Q431 85 428 86 M455 65Q449 74 444 84 M444 84Q435 91 437 95 M444 84Q437 92 441 99 M453 65Q453 73 443 78 M443 78Q435 82 437 90 M443 78Q447 80 439 87 M453 65Q450 76 448 84 M448 84Q440 91 440 93 M453 65Q451 71 453 82 M453 82Q455 86 456 94 M453 82Q459 87 455 94 M453 82Q459 85 455 93 M452 90Q448 104 448 123 M448 123Q447 132 438 139 M448 123Q454 132 456 144 M452 90Q451 100 441 112 M441 112Q436 119 433 128 M441 112Q443 119 433 126 M441 112Q436 116 425 123 M481 89Q485 100 485 113 M485 113Q483 122 487 132 M485 113Q482 124 483 131 M481 89Q475 99 472 110 M472 110Q463 120 464 125 M481 89Q480 98 488 109 M488 109Q484 112 490 121 M488 109Q485 117 489 122 M528 67Q527 74 519 80 M519 80Q517 86 515 91 M519 80Q525 86 519 90 M528 67Q530 75 522 83 M522 83Q521 90 521 93 M522 83Q516 85 515 91 M527 64Q524 71 527 83 M527 83Q531 86 533 95 M527 64Q533 76 529 83 M529 83Q528 88 525 93 M529 83Q531 87 535 94 M538 71Q533 81 530 92 M530 92Q530 98 532 108 M530 92Q521 96 516 103 M530 92Q532 99 532 105 M538 71Q541 80 540 89 M540 89Q542 92 539 101 M582 53Q589 58 585 69 M585 69Q581 72 587 79 M585 69Q583 73 593 77 M568 48Q562 52 562 60 M562 60Q559 64 554 66 M562 60Q565 64 561 69 M562 60Q560 60 554 65 M581 55Q585 65 584 70 M584 70Q591 74 586 79 M584 70Q587 73 589 78 M581 55Q581 63 581 70 M581 70Q585 72 586 78 M581 55Q580 63 582 70 M582 70Q577 74 577 82 M582 70Q581 76 580 80 M582 70Q582 79 579 82 M631 74Q646 80 650 82 M650 82Q661 90 661 93 M650 82Q655 82 661 87 M631 74Q633 81 635 92 M635 92Q641 101 641 104 M614 80Q612 94 621 107 M621 107Q631 112 630 119 M614 80Q617 93 612 100 M612 100Q608 106 609 111 M612 100Q606 105 610 113 M612 100Q606 107 602 113 M614 80Q619 89 613 101 M613 101Q614 107 610 113 M613 101Q610 108 609 112 M685 96Q690 104 699 116 M699 116Q698 126 704 135 M699 116Q701 121 710 127 M699 116Q699 123 700 130 M685 96Q689 109 695 119 M695 119Q691 125 693 135 M695 119Q697 129 692 135 M695 119Q693 127 691 138 M748 88Q756 97 763 110 M763 110Q765 115 772 124 M763 110Q772 115 779 124 M763 110Q768 116 780 121 M748 88Q763 98 770 107 M770 107Q779 112 790 114 M770 107Q774 113 782 118 M770 107Q778 118 780 126 M729 64Q736 71 735 79 M735 79Q732 87 734 91 M735 79Q730 83 733 89 M735 79Q732 85 738 89 M729 64Q726 69 725 78 M725 78Q719 84 719 86 M725 78Q725 82 724 88 M797 85Q806 94 811 105 M811 105Q811 112 812 119 M811 105Q816 112 812 120 M811 105Q812 116 817 121 M810 80Q820 83 831 87 M831 87Q830 93 840 97 M831 87Q836 92 843 97 M831 87Q841 89 844 94 M806 81Q815 90 813 102 M813 102Q818 112 817 117 M813 102Q813 110 823 116 M813 102Q818 111 816 115 M806 81Q808 92 818 98 M818 98Q819 101 829 109 M818 98Q822 102 819 112 M812 61Q818 65 824 75 M824 75Q826 79 832 84 M824 75Q825 80 831 84 M850 86Q861 96 866 106 M866 106Q866 115 871 124 M850 86Q852 92 865 101 M865 101Q866 105 877 107 M865 101Q869 107 880 108 M829 92Q829 104 824 113 M824 113Q826 122 822 129 M824 113Q829 119 822 125 M824 113Q826 120 829 129 M829 92Q828 102 828 115 M828 115Q830 121 832 132 M870 100Q870 114 860 130 M860 130Q861 142 860 154 M860 130Q863 141 854 148 M931 72Q942 83 942 89 M942 89Q947 95 952 100 M942 89Q947 97 941 105 M973 79Q979 91 980 100 M980 100Q988 104 991 110 M973 79Q973 88 985 91 M985 91Q988 96 991 101 M985 91Q983 97 991 103 M973 79Q977 87 981 99 M981 99Q982 103 980 111 M981 99Q984 109 980 116 M943 81Q947 94 941 105 M941 105Q948 110 948 118 M941 105Q943 110 939 118 M943 81Q937 91 938 100 M938 100Q944 105 939 111 M938 100Q930 105 929 112 M943 81Q939 89 930 100 M930 100Q929 104 916 111 M991 99Q984 116 982 130 M982 130Q977 140 967 146 M982 130Q975 138 980 152 M991 99Q993 111 984 126 M984 126Q974 133 974 143 M984 126Q982 130 975 140 M984 126Q979 137 979 146 M973 95Q967 101 952 110 M952 110Q948 114 945 123 M952 110Q953 122 945 129 M973 95Q957 105 951 118 M951 118Q945 129 939 134 M973 95Q967 111 960 125 M960 125Q963 139 960 150 M960 125Q956 134 963 144 M1028 72Q1032 82 1033 90 M1033 90Q1028 98 1034 102 M1028 72Q1029 77 1034 86 M1034 86Q1042 86 1042 91 M1031 77Q1037 86 1043 92 M1043 92Q1051 96 1053 102 M1043 92Q1049 94 1055 98 M1031 77Q1028 89 1026 97 M1026 97Q1026 107 1030 112 M1076 61Q1079 69 1073 74 M1073 74Q1068 78 1075 84 M1073 74Q1078 77 1072 83 M1076 61Q1074 71 1082 78 M1082 78Q1077 84 1081 90 M1082 78Q1082 84 1085 87 M1065 69Q1070 79 1068 88 M1068 88Q1073 96 1067 98 M1065 69Q1064 80 1061 93 M1061 93Q1060 101 1062 108 M1061 93Q1057 103 1062 110 M1065 69Q1068 81 1073 91 M1073 91Q1078 96 1082 102 M1073 91Q1078 95 1088 102 M1073 91Q1069 98 1070 106 M1120 65Q1117 76 1119 83 M1119 83Q1116 89 1123 93 M1119 83Q1117 90 1122 96 M1120 65Q1127 68 1137 75 M1137 75Q1142 78 1146 86 M1120 65Q1129 69 1134 77 M1134 77Q1141 78 1145 85 M1134 77Q1133 83 1144 84 M1144 58Q1143 66 1149 75 M1149 75Q1157 76 1157 81 M1144 58Q1140 65 1141 71 M1141 71Q1139 79 1136 81 M1141 71Q1137 73 1141 79 M1138 61Q1137 67 1138 78 M1138 78Q1145 84 1141 89 M1138 78Q1139 84 1134 87 M1138 61Q1137 68 1132 78 M1132 78Q1132 82 1128 91 M1132 78Q1132 84 1131 88 M1132 78Q1126 82 1130 88 M1123 58Q1122 63 1117 73 M1117 73Q1110 78 1107 80 M1117 73Q1118 77 1117 86 M1172 63Q1179 73 1176 81 M1176 81Q1185 86 1182 93 M1176 81Q1173 85 1179 91 M1172 63Q1176 72 1176 76 M1176 76Q1176 81 1175 85 M1176 76Q1183 81 1179 85 M1214 61Q1222 68 1219 75 M1219 75Q1216 78 1224 82 M1219 75Q1221 80 1222 84 M1214 61Q1214 70 1206 73 M1206 73Q1203 75 1203 82 M1211 62Q1212 69 1202 73 M1202 73Q1201 76 1199 85 M1202 73Q1198 76 1193 78 M1211 62Q1217 68 1211 78 M1211 78Q1208 80 1211 88 M1211 78Q1210 83 1207 88 M1211 78Q1211 82 1215 90 M1217 70Q1217 78 1218 87 M1218 87Q1213 95 1216 98 M1218 87Q1215 89 1221 96 M1217 70Q1214 80 1205 90 M1205 90Q1204 97 1196 100 M1205 90Q1208 96 1203 103 M1205 90Q1199 95 1198 106 M1231 76Q1236 86 1230 97 M1230 97Q1227 104 1227 112 M1230 97Q1228 102 1231 109 M1231 76Q1232 86 1230 94 M1230 94Q1225 102 1223 103 M1230 94Q1228 101 1225 106 M1231 76Q1218 79 1215 86 M1215 86Q1206 89 1202 88 M1215 86Q1206 84 1199 88 M1226 84Q1214 95 1205 100 M1205 100Q1192 101 1188 107 M1205 100Q1203 107 1197 114 M1226 84Q1225 96 1226 112 M1226 112Q1230 121 1228 129 M1280 94Q1277 108 1273 122 M1273 122Q1271 132 1264 143 M1273 122Q1270 130 1279 142 M1273 122Q1273 133 1264 138 M1316 80Q1322 93 1318 99 M1318 99Q1319 107 1320 111 M1316 80Q1326 87 1331 100 M1331 100Q1337 111 1334 118 M1316 80Q1313 92 1318 106 M1318 106Q1309 116 1311 123 M1318 106Q1322 116 1324 122 M1318 106Q1317 112 1315 120 M1346 77Q1343 87 1349 95 M1349 95Q1352 99 1345 107 M1349 95Q1351 102 1350 109 M1349 95Q1341 99 1345 106 M1346 77Q1347 81 1357 91 M1357 91Q1356 95 1363 100 M1357 91Q1353 95 1359 104 M1351 80Q1354 85 1367 92 M1367 92Q1368 98 1380 101 M1367 92Q1368 96 1377 101 M1367 92Q1372 92 1380 96 M1351 80Q1358 92 1357 99 M1357 99Q1351 106 1357 111 M1357 99Q1363 103 1367 109 M1357 99Q1352 106 1357 112 M1375 73Q1384 80 1387 91 M1387 91Q1397 95 1397 96 M1387 91Q1389 98 1395 105 M1387 91Q1388 96 1396 101 M1375 73Q1378 87 1374 96 M1374 96Q1375 106 1377 111 M1375 73Q1367 86 1369 94 M1369 94Q1368 98 1364 105 M1362 66Q1367 71 1367 78 M1367 78Q1369 84 1367 87 M1367 78Q1369 84 1366 89 M1362 66Q1359 76 1366 82 M1366 82Q1363 86 1365 94 M1362 66Q1357 74 1363 81 M1363 81Q1369 85 1369 91 M1365 73Q1366 79 1369 91 M1369 91Q1371 96 1370 104 M1403 53Q1399 63 1399 68 M1399 68Q1402 74 1398 80 M1399 68Q1399 72 1398 79 M1399 68Q1392 70 1390 78 M1403 53Q1410 64 1409 70 M1409 70Q1405 76 1410 82 M1409 70Q1416 77 1412 83 M1403 53Q1410 60 1409 66 M1409 66Q1407 71 1416 73 M1392 50Q1394 56 1385 64 M1385 64Q1379 69 1379 71 M1392 50Q1390 58 1389 65 M1389 65Q1392 68 1389 75 M1389 65Q1380 67 1382 74 M1429 57Q1431 68 1424 75 M1424 75Q1419 84 1423 87 M1424 75Q1425 81 1419 88"/></svg>
  <div class="wrap">
-  <div class="p"><b>5.0<span class="stars" aria-label="5 out of 5 stars"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1l2.7 5.6 6.1.9-4.4 4.3 1 6.1L10 15l-5.4 2.9 1-6.1L1.2 7.5l6.1-.9z" fill="#e5b543"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1l2.7 5.6 6.1.9-4.4 4.3 1 6.1L10 15l-5.4 2.9 1-6.1L1.2 7.5l6.1-.9z" fill="#e5b543"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1l2.7 5.6 6.1.9-4.4 4.3 1 6.1L10 15l-5.4 2.9 1-6.1L1.2 7.5l6.1-.9z" fill="#e5b543"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1l2.7 5.6 6.1.9-4.4 4.3 1 6.1L10 15l-5.4 2.9 1-6.1L1.2 7.5l6.1-.9z" fill="#e5b543"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1l2.7 5.6 6.1.9-4.4 4.3 1 6.1L10 15l-5.4 2.9 1-6.1L1.2 7.5l6.1-.9z" fill="#e5b543"/></svg></span></b><span>Google rating</span></div>
-  <div class="p"><b>29 reviews</b><span>from local homeowners</span></div>
-  <div class="p"><b>St. James</b><span>600 Middle Country Road</span></div>
-  <div class="p"><b>Ask for Joe</b><span>(631) 371-7043</span></div>
- </div>
-</section>
-
-<section class="services" id="services">
- <div class="wrap">
-  <div class="sv-head">
-   <div><p class="tag">What Falzone does</p><h2>Everything a yard needs, from the water up.</h2></div>
-   <p>These are the jobs Falzone's customers describe in their Google reviews. Not sure which you need? Call Joe and talk it through.</p>
+  <div class="sec-h">
+   <h2 id="svc-h">Everything from the mower line down to the water line.</h2>
+   <p>The jobs Falzone's customers describe in their Google reviews, laid out by where the work happens in the ground. Not sure what your yard needs? Call Joe and talk it through.</p>
   </div>
-  <div class="ledger">
-   <article class="col">
-    <span class="verb">Water</span>
-    <svg viewBox="0 0 64 64" aria-hidden="true"><rect x="28" y="40" width="8" height="18" fill="#5a3e2b"/><rect x="24" y="34" width="16" height="8" rx="2" fill="#1f2419"/><path d="M32 34 C 20 20, 10 18, 4 20M32 34 C 44 20, 54 18, 60 20M32 34 C 28 18, 26 10, 24 6M32 34 C 36 18, 38 10, 40 6" stroke="#6fa3c9" stroke-width="2.5" fill="none" stroke-linecap="round"/><path d="M0 58h64" stroke="#2f6b2f" stroke-width="4"/></svg>
-    <h3>Sprinkler systems</h3>
-    <p>New systems laid out by zone, and repairs when a head, line or valve stops doing its job.</p>
-    <ul><li>Installation</li><li>Repair</li></ul>
-   </article>
-   <article class="col">
-    <span class="verb">Grow</span>
-    <svg viewBox="0 0 64 64" aria-hidden="true"><rect x="0" y="38" width="64" height="26" fill="#8a6a4f"/><rect x="0" y="30" width="64" height="10" fill="#5a3e2b"/><path d="M4 30v-8M10 30v-11M16 30v-7M22 30v-10M28 30v-8M34 30v-12M40 30v-8M46 30v-10M52 30v-7M58 30v-11" stroke="#2f6b2f" stroke-width="3" stroke-linecap="round"/><g fill="#6b4c36"><circle cx="12" cy="48" r="2"/><circle cx="30" cy="54" r="2"/><circle cx="48" cy="46" r="2"/></g></svg>
-    <h3>Sod, seed and topsoil</h3>
-    <p>A new lawn starts with the ground under it. Topsoil to level and feed, then sod for a lawn on day one, or seed for one that fills in over the season.</p>
-    <ul><li>Sod</li><li>Seeding</li><li>Topsoil</li></ul>
-   </article>
-   <article class="col">
-    <span class="verb">Plant</span>
-    <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M0 50 Q32 40 64 50 V64 H0Z" fill="#5a3e2b"/><path d="M14 46V30M32 42V22M50 46V30" stroke="#2f6b2f" stroke-width="3"/><circle cx="14" cy="26" r="7" fill="#e8a33d"/><circle cx="32" cy="18" r="8" fill="#c55d4a"/><circle cx="50" cy="26" r="7" fill="#f3ead6" stroke="#ccc" /><path d="M32 34c-6-2-8-6-8-6s6 0 8 4M32 34c6-2 8-6 8-6s-6 0-8 4" fill="#4b8a3f"/></svg>
-    <h3>Flower beds</h3>
-    <p>New beds shaped, edged and planted, so the front of the house has color and clean lines.</p>
-    <ul><li>Flower bed creation</li></ul>
-   </article>
-   <article class="col">
-    <span class="verb">Keep</span>
-    <svg viewBox="0 0 64 64" aria-hidden="true"><rect x="0" y="44" width="64" height="20" fill="#3b7a37"/><path d="M0 44h16v20H0zM32 44h16v20H32z" fill="#2f6b2f"/><path d="M40 10 L 22 40" stroke="#5a3e2b" stroke-width="3" stroke-linecap="round"/><path d="M14 36 h20 l-2 8 h-16z" fill="#c9b48f"/><path d="M48 18c4 2 6 6 4 9M52 12c4 2 6 6 4 9" stroke="#b5654a" stroke-width="2.5" fill="none" stroke-linecap="round"/></svg>
+  <ol class="strata">
+   <li class="layer">
+    <span class="depth">Surface</span>
     <h3>Cleanups and mowing</h3>
-    <p>Spring and fall cleanups to clear beds and lawns, plus regular mowing through the growing season.</p>
-    <ul><li>Cleanups</li><li>Mowing</li></ul>
-   </article>
-  </div>
+    <div><p>Spring and fall cleanups that clear leaves and debris off beds and lawns, and regular mowing through the growing season.</p><ul class="jobs"><li>Cleanups</li><li>Mowing</li></ul></div>
+   </li>
+   <li class="layer">
+    <span class="depth">Root zone</span>
+    <h3>Sod and seed</h3>
+    <div><p>Sod for a finished lawn the day it goes down, or seed for one that fills in over the season. Either way it is laid on prepared ground.</p><ul class="jobs"><li>Sod</li><li>Seeding</li></ul></div>
+   </li>
+   <li class="layer">
+    <span class="depth">Topsoil</span>
+    <h3>Topsoil and flower beds</h3>
+    <div><p>Topsoil brought in to level low spots and give roots something to grow in. New beds shaped, edged and planted so the front of the house has color and clean lines.</p><ul class="jobs"><li>Topsoil</li><li>Flower bed creation</li></ul></div>
+   </li>
+   <li class="layer">
+    <span class="depth">Water line</span>
+    <h3>Sprinkler systems</h3>
+    <div><p>New systems laid out zone by zone, and repairs when a head, line or valve stops doing its job.</p><ul class="jobs"><li>Installation</li><li>Repair</li></ul></div>
+   </li>
+  </ol>
  </div>
+ <svg class="pipeline" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true"><path class="pipe" d="M0 62H1440"/><path class="riser" d="M150 62V14"/><rect class="head" x="143" y="4" width="14" height="12" rx="2"/><circle class="tee" cx="150" cy="62" r="6"/><path class="riser" d="M470 62V14"/><rect class="head" x="463" y="4" width="14" height="12" rx="2"/><circle class="tee" cx="470" cy="62" r="6"/><path class="riser" d="M790 62V14"/><rect class="head" x="783" y="4" width="14" height="12" rx="2"/><circle class="tee" cx="790" cy="62" r="6"/><path class="riser" d="M1110 62V14"/><rect class="head" x="1103" y="4" width="14" height="12" rx="2"/><circle class="tee" cx="1110" cy="62" r="6"/><path class="riser" d="M1360 62V14"/><rect class="head" x="1353" y="4" width="14" height="12" rx="2"/><circle class="tee" cx="1360" cy="62" r="6"/></svg>
 </section>
 
-<section class="season" id="season">
- <div class="wrap">
-  <div class="se-head">
-   <div>
-    <span class="sample-tag">Sample tool</span>
-    <h2>The Long Island lawn calendar.</h2>
-    <p style="color:var(--muted);margin:var(--s3) 0 0;max-width:40em">It opens on this month. See what is in season now and what to book ahead before the schedule fills. Tap any month to look ahead.</p>
+<section class="clay dark" id="joe" aria-labelledby="joe-h">
+ <div class="wrap joe">
+  <div>
+   <h2 id="joe-h">Ask for Joe.</h2>
+   <p class="joe-p">Call to talk through the job, set up a visit, or check on weekend hours. If nobody picks up, the free estimate form below is the next best thing.</p>
+   <a class="big-tel" href="tel:+16313717043">(631) 371-7043</a>
+  </div>
+  <div class="facts">
+   <div class="fact">
+    <h3>Google rating</h3>
+    <div class="score-row"><b>5.0</b><p>from 29 reviews.<br><a href="https://www.google.com/maps/search/?api=1&amp;query=Falzone+Landscaping+and+Design+600+Middle+Country+Road+St.+James+NY" target="_blank" rel="noopener">See the reviews on Google</a></p></div>
+   </div>
+   <div class="fact">
+    <h3>Hours</h3>
+    <table class="hrs"><tbody><tr><td>Monday to Friday</td><td>Until 5 PM</td></tr><tr><td>Saturday and Sunday</td><td>Call for hours</td></tr></tbody></table>
+   </div>
+   <div class="fact">
+    <h3>Address</h3>
+    <p>600 Middle Country Road<br>St. James, NY 11780</p>
    </div>
   </div>
-  <div class="g-wrap">
-   <div class="g-inner">
-    <div class="months" id="months" role="group" aria-label="Choose a month"><span></span></div>
-    <div class="gantt" id="gantt"><div class="cur" id="cur" aria-hidden="true"></div></div>
-   </div>
-  </div>
-  <div class="advice" aria-live="polite">
-   <div><h3 id="nowH">In season now</h3><ul id="nowL"></ul></div>
-   <div class="book"><h3 id="bookH">Book now for next month</h3><ul id="bookL"></ul></div>
-   <div><h3>Good to know</h3><p id="tip" style="margin:0;color:var(--muted);font-size:.98rem"></p></div>
-  </div>
-  <p class="note">Typical timing for Long Island, for illustration. Weather moves these windows every year, so check with Joe for his actual schedule.</p>
  </div>
 </section>
 
-<section class="reviews" id="reviews">
+<section class="towns" id="towns" aria-labelledby="towns-h">
  <div class="wrap">
-  <p class="tag">From Google reviews</p>
-  <h2>On time, neat and fairly priced.</h2>
-  <div class="rv">
-   <figure><span class="q" aria-hidden="true"><svg viewBox="0 0 20 20"><path d="M3 11c0-4 2-7 6-8l1 2c-2 1-3 2-3 4h3v6H3zM11 11c0-4 2-7 6-8l1 2c-2 1-3 2-3 4h3v6h-7z" fill="#f6f1e4"/></svg></span><blockquote>The team was on time, neat, and friendly.</blockquote><figcaption>Dan L., Google review</figcaption></figure>
-   <figure><span class="q" aria-hidden="true" style="background:var(--soil)"><svg viewBox="0 0 20 20"><path d="M3 11c0-4 2-7 6-8l1 2c-2 1-3 2-3 4h3v6H3zM11 11c0-4 2-7 6-8l1 2c-2 1-3 2-3 4h3v6h-7z" fill="#f6f1e4"/></svg></span><blockquote>He was great to work with and price was reasonable, I would highly recommend.</blockquote><figcaption>Google review</figcaption></figure>
-   <figure><span class="q" aria-hidden="true"><svg viewBox="0 0 20 20"><path d="M3 11c0-4 2-7 6-8l1 2c-2 1-3 2-3 4h3v6H3zM11 11c0-4 2-7 6-8l1 2c-2 1-3 2-3 4h3v6h-7z" fill="#f6f1e4"/></svg></span><blockquote>We highly recommend Falzone Landscaping for quality at a fair price.</blockquote><figcaption>Google review</figcaption></figure>
+  <div>
+   <h2 id="towns-h">Based in St. James, on the North Shore.</h2>
+   <p class="t-note">Sample service area for this concept. Ask Joe whether your town is on the route.</p>
   </div>
+  <ul class="town-list">
+   <li class="home">St. James</li><li>Smithtown</li><li>Head of the Harbor</li><li>Nissequogue</li><li>Stony Brook</li><li>Setauket</li><li>Lake Grove</li><li>Kings Park</li>
+  </ul>
  </div>
 </section>
 
-<section class="visit" id="visit">
+<section class="estimate" id="estimate" aria-labelledby="est-h">
  <div class="wrap">
-  <div><p class="tag" style="color:var(--sun)">Find us</p><h2>On Middle Country Road in St. James.</h2></div>
   <div>
-   <h3>Address</h3>
-   <p>600 Middle Country Road<br>St. James, NY 11780</p>
-   <h3 style="margin-top:var(--s4)">Phone</h3>
-   <a class="tel" href="tel:+16313717043">(631) 371-7043</a>
-  </div>
-  <div>
-   <h3>Hours</h3>
-   <table class="hours"><tbody><tr><td>Monday to Friday</td><td>Until 5 PM</td></tr><tr><td>Saturday and Sunday</td><td>Call for hours</td></tr></tbody></table>
-  </div>
- </div>
-</section>
-
-<section class="contact" id="contact">
- <div class="wrap ct">
-  <div>
-   <p class="tag">Free quote</p>
-   <h2>Tell Joe what the yard needs.</h2>
-   <p class="lede">Pick the jobs, add your address and a good time to reach you. Or just call <a href="tel:+16313717043">(631) 371-7043</a>.</p>
+   <h2 id="est-h">Get a free estimate.</h2>
+   <p class="e-p">Tell Joe what the yard needs and where it is, and he can call you back to set up a look. Prefer the phone? <a href="tel:+16313717043">(631) 371-7043</a>.</p>
   </div>
   <div>
    <form class="form" data-demo data-done="done1" novalidate>
     <div class="fgrid">
-     <div class="field"><label for="f-name">Name *</label><input id="f-name" required autocomplete="name"><span class="msg">Please add your name.</span></div>
-     <div class="field"><label for="f-phone">Phone *</label><input id="f-phone" type="tel" required autocomplete="tel"><span class="msg">Please add a phone number.</span></div>
-     <div class="field full"><label for="f-addr">Street and town *</label><input id="f-addr" required autocomplete="street-address"><span class="msg">Where is the property?</span></div>
+     <div class="field"><label for="f-name">Name</label><input id="f-name" required autocomplete="name"><span class="msg">Add your name so Joe knows who to ask for.</span></div>
+     <div class="field"><label for="f-phone">Phone</label><input id="f-phone" type="tel" required autocomplete="tel"><span class="msg">Add a phone number for the callback.</span></div>
+     <div class="field full"><label for="f-addr">Street and town</label><input id="f-addr" required autocomplete="street-address"><span class="msg">Add the property address.</span></div>
      <fieldset class="field full"><legend>What do you need?</legend>
       <div class="checks">
        <label><input type="checkbox" name="svc" value="Sprinkler install">Sprinkler install</label>
@@ -429,15 +372,15 @@ footer p{margin:0 0 var(--s2)}
        <label><input type="checkbox" name="svc" value="Cleanup or mowing">Cleanup or mowing</label>
       </div>
      </fieldset>
-     <div class="field full"><label for="f-msg">Anything else</label><textarea id="f-msg" placeholder="Best time to call, gate code, what you have noticed"></textarea></div>
+     <div class="field full"><label for="f-msg">Anything else <span style="font-weight:500;color:var(--ink-2)">(optional)</span></label><textarea id="f-msg" placeholder="Best time to call, gate code, what you have noticed"></textarea></div>
     </div>
-    <button class="btn btn-lawn" type="submit" style="margin-top:var(--s4);width:100%">Request my free quote</button>
-    <p class="demo-note">Demo form. This is a website concept. Nothing is sent or saved.</p>
+    <button class="btn btn-ink submit" type="submit">Request my free estimate</button>
+    <p class="demo-note">Sample form for this website concept. Nothing is sent or saved.</p>
    </form>
    <div class="done" id="done1" hidden tabindex="-1">
-    <h3>Demo complete.</h3>
-    <p>This is a website concept, so nothing was sent or saved. On the live site, the quote request would go to Falzone Landscaping and Design.</p>
-    <button class="btn btn-lawn restart" type="button">Start over</button>
+    <h3>Estimate request ready.</h3>
+    <p>This is a website concept, so nothing was sent or saved. On a live site, this request would go straight to Falzone Landscaping and Design.</p>
+    <button class="btn btn-ink restart" type="button">Start over</button>
    </div>
   </div>
  </div>
@@ -447,27 +390,28 @@ footer p{margin:0 0 var(--s2)}
 <footer>
  <div class="wrap">
   <div class="ft">
-   <div><h4>Falzone Landscaping and Design</h4><p>600 Middle Country Road, St. James, NY 11780</p><p>Monday to Friday until 5 PM. Call for weekend hours.</p></div>
-   <div><h4>Call Joe</h4><p><a href="tel:+16313717043">(631) 371-7043</a></p></div>
-   <div><h4>On this page</h4><p><a href="#services">Services</a></p><p><a href="#season">Lawn calendar</a></p><p><a href="#contact">Free quote</a></p></div>
+   <div><b>Falzone Landscaping and Design</b><p>600 Middle Country Road, St. James, NY 11780</p><p>Monday to Friday until 5 PM. Call for weekend hours.</p></div>
+   <div><b>Call Joe</b><p><a href="tel:+16313717043">(631) 371-7043</a></p></div>
+   <div><b>On this page</b><p><a href="#services">Services</a></p><p><a href="#towns">Towns</a></p><p><a href="#estimate">Free estimate</a></p></div>
   </div>
-  <p class="disc">Independent website concept designed by Lisette Colon. Not affiliated with or approved by Falzone Landscaping and Design. Address, hours, rating and review quotes are from the business's public Google listing, checked October 2026. The service list is drawn from Google reviews, details to confirm with the owner. Illustrations are not real properties. The lawn calendar shows general Long Island timing, not Falzone's schedule, and the quote form is a sample feature: nothing entered here is sent or saved.</p>
+  <p class="disc">Independent website concept designed by Lisette Colon. Not affiliated with or approved by Falzone Landscaping and Design. Address, hours and the rating and review count are from the business's public Google listing, checked October 2026. The service list is drawn from Google reviews, details to confirm with the owner. The towns list is a sample service area, not confirmed by the business. Illustrations are not real properties, and the estimate form is a sample feature: nothing entered here is sent or saved.</p>
  </div>
 </footer>
-<a class="btn btn-lawn sticky-call" href="tel:+16313717043">Call (631) 371-7043</a>
+<a class="btn btn-gold sticky-call" href="tel:+16313717043">Call Joe, (631) 371-7043</a>
 
 <script>
 (function(){
  const btn=document.querySelector('.menu-btn'),nav=document.getElementById('nav');
  btn.addEventListener('click',()=>{const o=btn.getAttribute('aria-expanded')==='true';btn.setAttribute('aria-expanded',String(!o));nav.classList.toggle('open',!o)});
  nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{btn.setAttribute('aria-expanded','false');nav.classList.remove('open')}));
-
+ const sc=document.querySelector('.sticky-call'),acts=document.querySelector('.hero .acts');
+ if('IntersectionObserver' in window){new IntersectionObserver(([e])=>sc.classList.toggle('show',!e.isIntersecting&&e.boundingClientRect.top<0)).observe(acts)}else{sc.classList.add('show')}
  document.querySelectorAll('form[data-demo]').forEach(f=>{
   const done=document.getElementById(f.dataset.done);
   f.addEventListener('submit',e=>{
    e.preventDefault();let first=null;
    f.querySelectorAll('input:not([type=checkbox]),textarea').forEach(el=>{
-    const v=el.value.trim();let bad=el.required&&!v;
+    const bad=el.required&&!el.value.trim();
     const fl=el.closest('.field');if(fl)fl.classList.toggle('err',bad);
     el.setAttribute('aria-invalid',bad?'true':'false');if(bad&&!first)first=el;
    });
@@ -476,49 +420,6 @@ footer p{margin:0 0 var(--s2)}
   });
   done.querySelector('.restart').addEventListener('click',()=>{f.reset();f.querySelectorAll('.err').forEach(x=>x.classList.remove('err'));f.hidden=false;done.hidden=true;f.querySelector('input').focus()});
  });
-
- // lawn calendar: months are 1-12, windows inclusive
- const M=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
- const FULL=['January','February','March','April','May','June','July','August','September','October','November','December'];
- const T=[
-  {n:'Spring cleanup',c:'#b5654a',w:[[3,4]],u:1},
-  {n:'Sprinkler turn-on',c:'#4f8fbf',w:[[4,5]],u:1},
-  {n:'Mowing',c:'#3b7a37',w:[[4,11]]},
-  {n:'Sod',c:'#6fa04f',w:[[4,6],[9,10]]},
-  {n:'Seeding',c:'#8bb35f',w:[[4,5],[8,10]]},
-  {n:'Topsoil',c:'#8a6a4f',w:[[4,6],[9,11]]},
-  {n:'Flower beds',c:'#e8a33d',w:[[4,6],[9,10]]},
-  {n:'Sprinkler repair',c:'#6fa3c9',w:[[4,10]]},
-  {n:'Fall cleanup',c:'#a2543c',w:[[10,12]],u:1},
-  {n:'Sprinkler winterize',c:'#2f5f86',w:[[10,11]],u:1}
- ];
- const TIPS={1:'Quiet months outside. A good time to plan beds and a new sprinkler layout for spring.',2:'Book spring cleanup now. The first warm weeks get busy fast.',3:'Cleanup clears leaves and debris so the lawn can breathe as it greens up.',4:'Sprinkler turn-on is when broken heads from winter show up. Have them fixed before summer.',5:'Late spring is a good window for sod and flower beds while the weather is mild.',6:'Lay sod early in the month. Hot spells make new lawns thirsty.',7:'Mowing a little higher in summer heat helps the lawn hold moisture.',8:'Late August starts the best seeding season on Long Island. Warm soil, cooler nights.',9:'Fall is prime time for seed, sod and topsoil. Lawns root well before winter.',10:'Book winterizing before the first hard freeze. Water left in the lines can crack pipes.',11:'Fall cleanup gets the last leaves off the lawn before they mat down over winter.',12:'Last leaf pickups wrap up. Start a list for spring.'};
- const inW=(t,m)=>t.w.some(([a,b])=>m>=a&&m<=b);
- const startsIn=(t,m)=>t.w.some(([a])=>a===m);
- const now=new Date().getMonth()+1;let sel=now;
- const months=document.getElementById('months'),g=document.getElementById('gantt'),cur=document.getElementById('cur');
- M.forEach((m,i)=>{const b=document.createElement('button');b.type='button';b.textContent=m;b.setAttribute('aria-label',FULL[i]+(i+1===now?' (this month)':''));if(i+1===now)b.classList.add('now');b.addEventListener('click',()=>{sel=i+1;render()});months.appendChild(b)});
- T.forEach(t=>{const r=document.createElement('div');r.className='g-row';r.innerHTML='<span class="nm"><i style="background:'+t.c+'"></i>'+t.n+'</span>';
-  t.w.forEach(([a,b])=>{const s=document.createElement('span');s.className='bar';s.style.background=t.c;s.style.gridColumn=(a+1)+' / '+(b+2);r.appendChild(s)});
-  r.setAttribute('aria-label',t.n+': '+t.w.map(([a,b])=>FULL[a-1]+' to '+FULL[b-1]).join(' and '));g.appendChild(r)});
- function render(){
-  [...months.querySelectorAll('button')].forEach((b,i)=>b.setAttribute('aria-pressed',String(i+1===sel)));
-  const rows=[...g.querySelectorAll('.g-row')];rows.forEach((r,i)=>r.classList.toggle('dim',!inW(T[i],sel)));
-  const first=rows[0];const lw=first.querySelector('.nm').offsetWidth;const colW=(first.getBoundingClientRect().width-lw)/12;
-  cur.style.left=(first.offsetLeft+lw+(sel-1)*colW)+'px';cur.style.width=colW+'px';
-  const nxt=sel%12+1,nxt2=nxt%12+1;
-  const active=T.filter(t=>inW(t,sel));
-  const book=T.filter(t=>(startsIn(t,nxt)||startsIn(t,nxt2))&&!inW(t,sel));
-  // urgent: things ending this month or next that are active
-  document.getElementById('nowH').textContent=(sel===now?'In season now, ':'In season, ')+FULL[sel-1];
-  document.getElementById('nowL').innerHTML=active.length?active.map(t=>'<li>'+t.n+'</li>').join(''):'<li class="empty">Nothing outdoors this month. Time to plan.</li>';
-  const ending=active.filter(t=>t.u);
-  const bl=[...ending.map(t=>t.n+', get on the list before it fills'),...book.map(t=>t.n+', starts '+FULL[t.w.find(([a])=>a===nxt||a===nxt2)[0]-1])];
-  document.getElementById('bookH').textContent=sel===now?'Book now':'Book ahead from '+FULL[sel-1];
-  document.getElementById('bookL').innerHTML=bl.length?bl.map(s=>'<li>'+s+'</li>').join(''):'<li class="empty">Nothing urgent. Call Joe to get on the list.</li>';
-  document.getElementById('tip').textContent=TIPS[sel];
- }
- render();window.addEventListener('resize',render);
 })();
 </script>
 </body>
